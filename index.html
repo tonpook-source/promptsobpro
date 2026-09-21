@@ -480,6 +480,15 @@
 
   <!-- JAVASCRIPT LOGIC & FULL DATABASE (80 QUESTIONS) -->
   <script>
+    // CONFIG: paste the deployed Apps Script Web App URL here (ends with /exec) so that
+    // static hosts like GitHub Pages (which have no `google.script` object) can still
+    // verify passcodes / save results against the Google Sheet over HTTP.
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/exec';
+
+    function isAppsScriptConfigured() {
+      return typeof APPS_SCRIPT_URL === 'string' && APPS_SCRIPT_URL.indexOf('https://script.google.com/macros/') === 0;
+    }
+
     // Full Comprehensive Database parsed from PDFs (20 Qs per Category = 80 Real Questions)
     const allQuestionsPool = [
       // CATEGORY 1: Basic Computer and Hardware (หมวดที่ 1)
@@ -1724,9 +1733,31 @@
             closeDialog();
             showDialog('เกิดข้อผิดพลาดในการตรวจสอบรหัส', 'ระบบขัดข้องไม่สามารถสื่อสารกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง', 'warning');
           })
-          .checkPasscode(passcodeInput);
+          .checkPasscode(passcodeInput, nameInput);
+      } else if (isAppsScriptConfigured()) {
+        // Static host (e.g. GitHub Pages): call the deployed Apps Script Web App over HTTP
+        showLoadingDialog('กำลังตรวจสอบสิทธิ์เข้าสอบ...', 'ระบบกำลังค้นหาและตรวจสอบรหัสเข้าสอบของคุณกับตารางข้อมูล Google Sheet กรุณารอสักครู่');
+
+        const url = APPS_SCRIPT_URL + '?action=checkPasscode'
+          + '&code=' + encodeURIComponent(passcodeInput)
+          + '&name=' + encodeURIComponent(nameInput);
+
+        fetch(url)
+          .then((res) => res.json())
+          .then((response) => {
+            closeDialog();
+            if (response && response.valid) {
+              proceedWithExam();
+            } else {
+              showDialog('รหัสผ่านเข้าสอบไม่ถูกต้อง', 'รหัสผ่านที่คุณป้อนไม่พาสิทธิ์ หรือไม่ได้ระบุลงในฐานข้อมูลของระบบ กรุณาติดต่อผู้รับผิดชอบหรือตรวจสอบตัวสะกดใหม่อีกครั้ง', 'warning');
+            }
+          })
+          .catch(() => {
+            closeDialog();
+            showDialog('เกิดข้อผิดพลาดในการตรวจสอบรหัส', 'ระบบขัดข้องไม่สามารถสื่อสารกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง', 'warning');
+          });
       } else {
-        // Mock simulation on standard previews
+        // Mock simulation, used only when no Apps Script Web App URL has been configured
         const mockValidCodes = ['PASS123', 'OK999', 'READY2026', 'ADMIN99'];
         if (mockValidCodes.includes(passcodeInput.toUpperCase())) {
           proceedWithExam();
@@ -2166,8 +2197,17 @@
             // Silently fail or log to background
           })
           .saveResult(payload);
+      } else if (isAppsScriptConfigured()) {
+        // Static host (e.g. GitHub Pages): call the deployed Apps Script Web App over HTTP
+        const params = new URLSearchParams(Object.assign({ action: 'saveResult' }, payload));
+        fetch(APPS_SCRIPT_URL + '?' + params.toString())
+          .then((res) => res.json())
+          .then(() => showToast("เชื่อมโยงข้อมูลและบันทึกคะแนนเรียบร้อยแล้ว"))
+          .catch(() => {
+            // Silently fail; the result is already backed up in localStorage
+          });
       }
-      
+
       loadPreviousLogs();
     }
 

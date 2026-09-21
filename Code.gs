@@ -11,10 +11,13 @@ const STATUS_ACTIVE = 'ใช้งานได้'; // reusable code, never loc
 const STATUS_UNUSED = 'ยังไม่ใช้'; // one-time code, still available
 const STATUS_USED = 'ใช้แล้ว';     // one-time code, already redeemed
 
+const QUIZ_PAGE_URL = 'https://tonpook-source.github.io/promptsobpro/';
+
 /**
- * Serves the HTML UI when opened directly, or acts as a small JSON API
- * (?action=checkPasscode / ?action=saveResult) for static hosts such as
- * GitHub Pages that embed this app but have no `google.script` bridge.
+ * Acts as a small JSON API (?action=checkPasscode / ?action=saveResult) for
+ * static hosts such as GitHub Pages that embed this app but have no
+ * `google.script` bridge. A bare request (no action) redirects to the
+ * actual quiz page instead of trying to serve HTML from this project.
  */
 function doGet(e) {
   const action = e && e.parameter && e.parameter.action;
@@ -27,10 +30,11 @@ function doGet(e) {
     return jsonOutput(saveResult(e.parameter));
   }
 
-  return HtmlService.createHtmlOutputFromFile('index')
-    .setTitle('ระบบทดสอบความรู้ความสามารถด้านเทคโนโลยีสารสนเทศและคอมพิวเตอร์')
-    .addMetaTag('viewport', 'width=device-width, initial-scale=1')
-    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+  return HtmlService.createHtmlOutput(
+    '<meta http-equiv="refresh" content="0; url=' + QUIZ_PAGE_URL + '">' +
+    '<p>กำลังนำไปยังหน้าทำข้อสอบ... หากไม่ถูกนำไปอัตโนมัติ ' +
+    '<a href="' + QUIZ_PAGE_URL + '">คลิกที่นี่</a></p>'
+  );
 }
 
 function jsonOutput(obj) {

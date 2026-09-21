@@ -1724,7 +1724,7 @@
             closeDialog();
             showDialog('เกิดข้อผิดพลาดในการตรวจสอบรหัส', 'ระบบขัดข้องไม่สามารถสื่อสารกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง', 'warning');
           })
-          .checkPasscode(passcodeInput);
+          .checkPasscode(passcodeInput, nameInput);
       } else {
         // Mock simulation on standard previews
         const mockValidCodes = ['PASS123', 'OK999', 'READY2026', 'ADMIN99'];

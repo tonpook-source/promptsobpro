@@ -11,11 +11,31 @@ const STATUS_ACTIVE = 'ใช้งานได้'; // reusable code, never loc
 const STATUS_UNUSED = 'ยังไม่ใช้'; // one-time code, still available
 const STATUS_USED = 'ใช้แล้ว';     // one-time code, already redeemed
 
-function doGet() {
+/**
+ * Serves the HTML UI when opened directly, or acts as a small JSON API
+ * (?action=checkPasscode / ?action=saveResult) for static hosts such as
+ * GitHub Pages that embed this app but have no `google.script` bridge.
+ */
+function doGet(e) {
+  const action = e && e.parameter && e.parameter.action;
+
+  if (action === 'checkPasscode') {
+    return jsonOutput(checkPasscode(e.parameter.code, e.parameter.name));
+  }
+
+  if (action === 'saveResult') {
+    return jsonOutput(saveResult(e.parameter));
+  }
+
   return HtmlService.createHtmlOutputFromFile('index')
     .setTitle('ระบบทดสอบความรู้ความสามารถด้านเทคโนโลยีสารสนเทศและคอมพิวเตอร์')
     .addMetaTag('viewport', 'width=device-width, initial-scale=1')
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+function jsonOutput(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 /**

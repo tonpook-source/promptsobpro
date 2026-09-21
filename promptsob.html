@@ -1,0 +1,2426 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คลังข้อสอบ ความรู้ความสามารถด้านเทคโนโลยีสารสนเทศและคอมพิวเตอร์</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts - Prompt & Sarabun -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    h1, h2, h3, h4, button, select, input, .font-prompt {
+      font-family: 'Prompt', sans-serif;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    /* Smooth transition for screens */
+    .animate-fadeIn {
+      animation: fadeIn 0.3s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col transition-colors duration-300">
+
+  <!-- TOP BRANDING BAR -->
+  <header class="bg-gradient-to-r from-blue-900 via-[#1E3E62] to-[#0B192C] text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3 text-center sm:text-left flex-col sm:flex-row mx-auto sm:mx-0">
+        <!-- Official Style SVG Badge -->
+        <div class="bg-amber-500 p-2.5 rounded-xl shadow-inner">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-white flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+            คลังข้อสอบอัจฉริยะ พร้อมสอบ - คลังข้อสอบราชการ PDF
+            <span class="bg-amber-500 text-slate-950 text-[10px] px-2 py-0.5 rounded font-semibold uppercase tracking-wider font-prompt">PRO</span>
+          </h1>
+          <p class="text-xs text-slate-300 mt-1 sm:mt-0 font-light">ความรู้ความสามารถด้านเทคโนโลยีสารสนเทศและคอมพิวเตอร์</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-7xl w-full mx-auto p-4 flex flex-col justify-start">
+    
+    <!-- 1. WELCOME / REGISTRATION SCREEN -->
+    <div id="welcome-screen" class="w-full max-w-3xl mx-auto my-4 sm:my-8 bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden transition-all duration-300">
+      <div class="bg-gradient-to-br from-blue-900 to-[#1e3e62] text-white p-6 sm:p-8 relative">
+        <div class="absolute right-4 bottom-4 opacity-10 hidden sm:block">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-48 w-48" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <span class="bg-amber-400 text-slate-950 font-bold text-[10px] sm:text-xs px-3 py-1 rounded-full uppercase font-prompt tracking-wider inline-block">ระบบฝึกทำข้อสอบเสมือนจริง</span>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mt-3 mb-2 font-prompt leading-tight">คลังข้อสอบ ความรู้ความสามารถด้านเทคโนโลยีสารสนเทศและคอมพิวเตอร์</h2>
+        <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+          รวมชุดแนวข้อสอบมาตรฐานระบบคอมพิวเตอร์ เครือข่าย โปรแกรมสำนักงาน และเทคโนโลยีสมัยใหม่ สุ่มคัดเลือกข้อสอบ 40 ข้อ (หมวดละ 10 ข้อเท่ากัน) สำหรับฝึกซ้อมแบบจับเวลาจริง 30 นาทีต่อครั้ง
+        </p>
+      </div>
+      
+      <div class="p-5 sm:p-8 space-y-6">
+        <!-- USER FORM -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Username Input -->
+          <div class="space-y-2">
+            <label for="username" class="block text-xs sm:text-sm font-semibold text-slate-700 font-prompt">ชื่อ-นามสกุลจริง</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5 text-slate-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <input type="text" id="username" class="block w-full pl-9 pr-3 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-xs sm:text-sm placeholder-slate-400 font-prompt transition-all bg-white" placeholder="สมชาย ตั้งใจเรียน">
+            </div>
+          </div>
+
+          <!-- Position Select -->
+          <div class="space-y-2">
+            <label for="position" class="block text-xs sm:text-sm font-semibold text-slate-700 font-prompt">ตำแหน่งสายสอบ</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5 text-slate-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v2H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-1V6a4 4 0 00-4-4zM8 6a2 2 0 114 0v2H8V6zm1 7a1 1 0 112 0v2a1 1 0 11-2 0v-2z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <select id="position" class="block w-full pl-9 pr-8 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-xs sm:text-sm bg-white font-prompt transition-all appearance-none cursor-pointer">
+                <option value="" disabled selected>-- เลือกสายสอบ --</option>
+                <option value="สายสอบอำนวยการ อก.1">สายสอบอำนวยการ อก.1</option>
+                <option value="สายสอบวิทยาการ พฐ.2">สายสอบวิทยาการ พฐ.2</option>
+              </select>
+              <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Passcode Input -->
+          <div class="space-y-2">
+            <label for="passcode-input" class="block text-xs sm:text-sm font-semibold text-slate-700 font-prompt">รหัสผ่านเข้าสอบ</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5 text-slate-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <input type="password" id="passcode-input" class="block w-full pl-9 pr-3 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-xs sm:text-sm placeholder-slate-400 font-prompt transition-all bg-white" placeholder="กรอกรหัสยืนยันสิทธิ์">
+            </div>
+          </div>
+        </div>
+
+        <!-- EXAM SPECS CARD -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100">
+          <div class="text-center p-1 sm:p-2">
+            <span class="block text-[10px] sm:text-xs text-slate-500 font-medium">จำนวนข้อสอบ</span>
+            <span class="text-base sm:text-lg font-bold text-blue-900">40 ข้อ</span>
+            <span class="block text-[9px] text-slate-400">(สุ่มดึงเฉลี่ยเท่ากัน)</span>
+          </div>
+          <div class="text-center p-1 sm:p-2 border-l border-slate-200">
+            <span class="block text-[10px] sm:text-xs text-slate-500 font-medium">เกณฑ์ผ่านขั้นต่ำ</span>
+            <span class="text-base sm:text-lg font-bold text-amber-600">60%</span>
+            <span class="block text-[9px] text-slate-400">(ทำถูก 24 ข้อขึ้นไป)</span>
+          </div>
+          <div class="text-center p-1 sm:p-2 border-l border-slate-200">
+            <span class="block text-[10px] sm:text-xs text-slate-500 font-medium">เวลาทำข้อสอบ</span>
+            <span class="text-base sm:text-lg font-bold text-blue-900">30 นาที</span>
+            <span class="block text-[9px] text-slate-400">(ระบบสลับคำถามใหม่)</span>
+          </div>
+          <div class="text-center p-1 sm:p-2 border-l border-slate-200">
+            <span class="block text-[10px] sm:text-xs text-slate-500 font-medium">รายงานคะแนน</span>
+            <span class="text-base sm:text-lg font-bold text-emerald-600">เรียลไทม์</span>
+            <span class="block text-[9px] text-slate-400">(เฉลยและแจงสูตรจำ)</span>
+          </div>
+        </div>
+
+        <!-- LIST OF DOMAINS -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wider font-prompt">รายละเอียดสัดส่วนวิชา (หมวดละ 10 ข้อ):</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div class="flex items-center gap-2 p-2.5 bg-slate-100 rounded border border-slate-200">
+              <span class="w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></span>
+              <span class="font-medium text-slate-700">หมวดที่ 1: ความรู้พื้นฐานด้านไอทีและคอมพิวเตอร์</span>
+            </div>
+            <div class="flex items-center gap-2 p-2.5 bg-slate-100 rounded border border-slate-200">
+              <span class="w-2 h-2 rounded-full bg-indigo-600 flex-shrink-0"></span>
+              <span class="font-medium text-slate-700">หมวดที่ 2: ระบบสื่อสารข้อมูลและเครือข่าย</span>
+            </div>
+            <div class="flex items-center gap-2 p-2.5 bg-slate-100 rounded border border-slate-200">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 flex-shrink-0"></span>
+              <span class="font-medium text-slate-700">หมวดที่ 3: ทักษะการใช้โปรแกรมคอมพิวเตอร์สำนักงาน</span>
+            </div>
+            <div class="flex items-center gap-2 p-2.5 bg-slate-100 rounded border border-slate-200">
+              <span class="w-2 h-2 rounded-full bg-amber-600 flex-shrink-0"></span>
+              <span class="font-medium text-slate-700">หมวดที่ 4: เทคโนโลยีสมัยใหม่และการประยุกต์ใช้</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTION BUTTON -->
+        <button onclick="startExam()" class="w-full bg-gradient-to-r from-blue-900 to-[#1E3E62] hover:from-blue-800 hover:to-[#244A74] text-white py-3.5 px-6 rounded-xl font-semibold text-base sm:text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all active:scale-[0.98] font-prompt min-h-[48px]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          เริ่มทำข้อสอบทันที
+        </button>
+
+        <!-- PREVIOUS LOGS TABLE -->
+        <div id="logs-container" class="space-y-3 pt-4 border-t border-slate-200 hidden">
+          <h4 class="text-sm font-semibold text-slate-700 font-prompt flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            ประวัติการทดสอบครั้งก่อนหน้าในอุปกรณ์นี้
+          </h4>
+          <div class="overflow-x-auto rounded-xl border border-slate-200">
+            <table class="min-w-[650px] w-full divide-y divide-slate-200 text-xs sm:text-sm">
+              <thead class="bg-slate-50 text-slate-600 font-prompt">
+                <tr>
+                  <th class="px-4 py-3 text-left font-medium">วัน-เวลาสอบ</th>
+                  <th class="px-4 py-3 text-left font-medium">ชื่อผู้สอบ</th>
+                  <th class="px-4 py-3 text-left font-medium">ตำแหน่งสายสอบ</th>
+                  <th class="px-4 py-3 text-center font-medium">คะแนน</th>
+                  <th class="px-4 py-3 text-center font-medium">เวลาที่ใช้</th>
+                  <th class="px-4 py-3 text-center font-medium">ผลการประเมิน</th>
+                </tr>
+              </thead>
+              <tbody id="logs-tbody" class="divide-y divide-slate-200 text-slate-700">
+                <!-- Records injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+          <div class="text-right">
+            <button onclick="clearLogs()" class="text-xs text-red-500 hover:text-red-700 font-medium">ลบประวัติทั้งหมด</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. QUIZ INTERFACE (TWO COLUMN LAYOUT) -->
+    <div id="quiz-screen" class="hidden w-full flex flex-col lg:flex-row gap-6 my-2 sm:my-4 animate-fadeIn">
+      
+      <!-- LEFT COLUMN: MAIN QUESTION WINDOW -->
+      <div class="flex-grow lg:w-2/3 space-y-4">
+        <!-- HEADER STATE CARD -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <div class="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full text-blue-900 bg-blue-100 font-prompt" id="category-badge">หมวดที่ 1</span>
+            <span class="text-xs font-medium text-slate-500">คำถามข้อที่ <span id="current-q-index" class="font-bold text-slate-800 text-sm">1</span> จากทั้งหมด 40 ข้อ</span>
+          </div>
+          
+          <!-- Countdown Timer -->
+          <div class="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-xl border border-slate-800 min-h-[40px]" id="timer-box">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" id="timer-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="font-mono text-base sm:text-lg font-bold tracking-widest text-amber-400" id="timer-text">30:00</span>
+          </div>
+        </div>
+
+        <!-- PROGRESS BAR -->
+        <div class="w-full bg-slate-200 rounded-full h-2 overflow-hidden shadow-inner">
+          <div class="bg-gradient-to-r from-blue-900 to-indigo-600 h-2 transition-all duration-300" id="progress-bar-fill" style="width: 2.5%;"></div>
+        </div>
+
+        <!-- ACTIVE QUESTION CARD -->
+        <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+          <div class="p-5 sm:p-8 space-y-6">
+            <!-- QUESTION TEXT -->
+            <div class="space-y-2">
+              <div class="flex items-start justify-between gap-4">
+                <h3 class="text-base sm:text-lg md:text-xl font-bold text-slate-900 leading-relaxed font-prompt" id="question-text">คำถามกำลังโหลด...</h3>
+                <!-- Flag for review -->
+                <button onclick="toggleFlag()" class="p-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 active:scale-95 transition-all flex items-center justify-center flex-shrink-0 min-h-[44px] min-w-[44px]" id="flag-btn" title="ปักธงข้อสอบนี้เพื่อกลับมาทวนภายหลัง">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 hover:text-amber-500 transition-colors" id="flag-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- CHOICES GROUP -->
+            <div class="space-y-3" id="choices-container">
+              <!-- Choices dynamically injected with beautiful custom styles -->
+            </div>
+          </div>
+
+          <!-- NAVIGATION BAR -->
+          <div class="bg-slate-50 px-5 sm:px-6 py-4 border-t border-slate-200 flex items-center justify-between gap-3">
+            <button onclick="prevQuestion()" class="px-4 sm:px-5 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-medium text-xs sm:text-sm flex items-center gap-1.5 transition-all font-prompt min-h-[44px]" id="prev-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              ย้อนกลับ (←)
+            </button>
+            <button onclick="nextQuestion()" class="px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-900 to-[#1E3E62] hover:from-blue-800 hover:to-[#244A74] text-white font-medium text-xs sm:text-sm flex items-center gap-1.5 shadow transition-all font-prompt min-h-[44px]" id="next-btn">
+              ถัดไป (→)
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: INTERACTIVE ANSWER GRID -->
+      <div class="lg:w-1/3 space-y-4">
+        <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-5 sm:p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <h4 class="font-bold text-slate-800 font-prompt">แผ่นกระดาษคำตอบ</h4>
+            <span class="text-xs bg-slate-100 px-2 py-1 rounded font-mono text-slate-600 font-semibold" id="answered-count">0 / 40 ข้อ</span>
+          </div>
+
+          <!-- LEGENDS -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-4 text-[11px] sm:text-xs font-medium text-slate-500">
+            <div class="flex items-center gap-1.5">
+              <span class="w-3.5 h-3.5 rounded bg-blue-900 border border-blue-900 inline-block"></span>
+              <span>เลือกคำตอบแล้ว</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-3.5 h-3.5 rounded bg-amber-400 border border-amber-400 inline-block"></span>
+              <span>ปักธงทบทวน</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-3.5 h-3.5 rounded bg-white border border-slate-300 inline-block"></span>
+              <span>ยังไม่ได้ตอบ</span>
+            </div>
+          </div>
+
+          <!-- GRID BODY (Highly responsive grid column widths across devices) -->
+          <div class="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-5 gap-2 max-h-[240px] overflow-y-auto pr-1" id="answers-grid">
+            <!-- Grid circles/squares generated automatically -->
+          </div>
+
+          <!-- TERMINATION BUTTON -->
+          <button onclick="confirmSubmit()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-6 rounded-xl font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all font-prompt min-h-[48px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            ส่งข้อสอบประเมินคะแนน
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. REAL-TIME DETAILED RESULTS / ANALYSIS SCREEN -->
+    <div id="result-screen" class="hidden w-full space-y-6 my-6 animate-fadeIn">
+      <!-- HEADER SUMMARY BAR -->
+      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+        <div class="bg-gradient-to-br from-blue-900 to-[#1e3e62] text-white p-6 sm:p-8 text-center relative">
+          <span class="bg-amber-400 text-slate-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider font-prompt" id="score-status-badge">ประกาศผลการสอบเสมือนจริง</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mt-4 mb-1 font-prompt" id="score-text">0 / 40 คะแนน</h2>
+          <p class="text-xs sm:text-sm text-slate-300" id="result-user-meta">คุณ สมชาย ตั้งใจเรียน (สายสอบวิทยาการ พฐ.2)</p>
+        </div>
+
+        <div class="p-5 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <!-- GAUGE CHART (LEFT) -->
+          <div class="flex flex-col items-center justify-center text-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <div class="relative w-32 h-36 sm:w-36 sm:h-36 flex items-center justify-center">
+              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="42" stroke="#e2e8f0" stroke-width="8" fill="transparent" />
+                <circle cx="50" cy="50" r="42" stroke="#0f172a" stroke-width="8" fill="transparent" stroke-dasharray="263.89" stroke-dashoffset="263.89" id="radial-progress-bar" class="transition-all duration-1000 ease-out" />
+              </svg>
+              <div class="absolute flex flex-col items-center justify-center">
+                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-prompt" id="radial-percent">0%</span>
+                <span class="text-[9px] sm:text-[10px] text-slate-500 font-semibold" id="radial-status">ไม่ผ่านเกณฑ์</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 mt-2">ใช้เวลาทำข้อสอบไป <span id="time-spent-text" class="font-bold text-slate-800">0 นาที 0 วินาที</span></p>
+          </div>
+
+          <!-- STRENGTHS & WEAKNESSES CATEGORY BREAKDOWN (RIGHT) -->
+          <div class="md:col-span-2 space-y-4">
+            <h3 class="text-sm sm:text-base font-bold text-slate-800 font-prompt flex items-center gap-1.5 justify-center md:justify-start">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              วิเคราะห์สัดส่วนคะแนนแยกตามหมวดหมู่
+            </h3>
+            
+            <div class="space-y-3 text-xs sm:text-sm">
+              <!-- C1 -->
+              <div class="space-y-1">
+                <div class="flex justify-between font-medium text-slate-700">
+                  <span class="truncate pr-2">หมวดที่ 1: ความรู้พื้นฐานด้านไอทีและคอมพิวเตอร์</span>
+                  <span class="font-bold text-slate-900 flex-shrink-0" id="cat1-score">0 / 10 ข้อ</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden shadow-inner">
+                  <div class="bg-blue-600 h-2 rounded-full transition-all duration-1000" style="width: 0%;" id="cat1-progress"></div>
+                </div>
+              </div>
+              <!-- C2 -->
+              <div class="space-y-1">
+                <div class="flex justify-between font-medium text-slate-700">
+                  <span class="truncate pr-2">หมวดที่ 2: ระบบสื่อสารข้อมูลและเครือข่าย</span>
+                  <span class="font-bold text-slate-900 flex-shrink-0" id="cat2-score">0 / 10 ข้อ</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden shadow-inner">
+                  <div class="bg-indigo-600 h-2 rounded-full transition-all duration-1000" style="width: 0%;" id="cat2-progress"></div>
+                </div>
+              </div>
+              <!-- C3 -->
+              <div class="space-y-1">
+                <div class="flex justify-between font-medium text-slate-700">
+                  <span class="truncate pr-2">หมวดที่ 3: ทักษะการใช้โปรแกรมคอมพิวเตอร์สำนักงาน</span>
+                  <span class="font-bold text-slate-900 flex-shrink-0" id="cat3-score">0 / 10 ข้อ</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden shadow-inner">
+                  <div class="bg-emerald-600 h-2 rounded-full transition-all duration-1000" style="width: 0%;" id="cat3-progress"></div>
+                </div>
+              </div>
+              <!-- C4 -->
+              <div class="space-y-1">
+                <div class="flex justify-between font-medium text-slate-700">
+                  <span class="truncate pr-2">หมวดที่ 4: เทคโนโลยีสมัยใหม่และการประยุกต์ใช้</span>
+                  <span class="font-bold text-slate-900 flex-shrink-0" id="cat4-score">0 / 10 ข้อ</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden shadow-inner">
+                  <div class="bg-amber-600 h-2 rounded-full transition-all duration-1000" style="width: 0%;" id="cat4-progress"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RE-RUN ACTION BUTTON -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button onclick="returnToStart()" class="flex-grow bg-slate-900 hover:bg-slate-800 text-white py-3.5 px-6 rounded-xl font-bold flex items-center justify-center gap-2 shadow-md transition-all font-prompt min-h-[48px]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l-7 7-7-7M21 10v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          กลับหน้าหลัก
+        </button>
+        <button onclick="restartExam()" class="flex-grow bg-amber-500 hover:bg-amber-600 text-slate-950 py-3.5 px-6 rounded-xl font-bold flex items-center justify-center gap-2 shadow-md transition-all font-prompt min-h-[48px]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 12H18" />
+          </svg>
+          เริ่มทำชุดใหม่ (สุ่มใหม่ทั้งหมด)
+        </button>
+      </div>
+
+      <!-- DETAILED REVIEW AREA -->
+      <div class="space-y-4">
+        <h3 class="text-base sm:text-lg font-bold text-slate-800 font-prompt flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v12m0 0l-4-4m4 4l4-4m0 6V4m0 0l-4 4m4-4l4 4" />
+          </svg>
+          เฉลยและบทวิเคราะห์คำถามรายข้อ (Review Sheet)
+        </h3>
+        
+        <div class="space-y-4" id="review-cards-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs mt-12">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p>สงวนลิขสิทธิ์ &copy; 2026 - เพจพร้อมสอบ - คลังข้อสอบราชการ PDF ความรู้ความสามารถด้านเทคโนโลยีสารสนเทศและคอมพิวเตอร์</p>
+    </div>
+  </footer>
+
+  <!-- CUSTOM DIALOG MODAL (REPLACES ALERT) -->
+  <div id="custom-dialog" class="fixed inset-0 bg-slate-950/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden transition-opacity duration-300">
+    <div class="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden scale-95 transition-all duration-300" id="dialog-box">
+      <div class="p-6 space-y-4">
+        <div class="flex items-center gap-3 text-red-600" id="dialog-header">
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <h3 class="text-lg font-bold font-prompt" id="dialog-title">แจ้งเตือน</h3>
+        </div>
+        <p class="text-sm text-slate-600 leading-relaxed" id="dialog-message">ข้อความแจ้งเตือน</p>
+      </div>
+      <div class="bg-slate-50 px-6 py-4 flex justify-end gap-2" id="dialog-actions">
+        <!-- Buttons added dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING SUCCESS TOAST -->
+  <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white border border-slate-800 shadow-2xl py-3 px-5 rounded-2xl z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2.5">
+    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+    <span class="text-sm font-medium" id="toast-text">ระบบตอบรับเสร็จสิ้น!</span>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC & FULL DATABASE (80 QUESTIONS) -->
+  <script>
+    // Full Comprehensive Database parsed from PDFs (20 Qs per Category = 80 Real Questions)
+    const allQuestionsPool = [
+      // CATEGORY 1: Basic Computer and Hardware (หมวดที่ 1)
+      {
+        id: 1,
+        category: 1,
+        text: "อุปกรณ์ใดทำหน้าที่คำนวณและประมวลผลข้อมูลเปรียบเสมือน 'สมอง' ของคอมพิวเตอร์?",
+        choices: [
+          "หน่วยความจำหลัก (RAM)",
+          "หน่วยประมวลผลกลาง (CPU)",
+          "หน่วยความจำสำรอง (SSD)",
+          "แผงวงจรหลัก (Mainboard)"
+        ],
+        answer: 1,
+        trick: "CPU = Central Processing Unit ทำหน้าที่คิดคำนวณ สั่งการทุกอย่างเหมือนสมอง",
+        explanation: "หน่วยประมวลผลกลาง (CPU) คือฮาร์ดแวร์หลักที่รับผิดชอบการรันชุดคำสั่งระบบ การคิดคำนวณทางตรรกะ และวิเคราะห์วิธานข้อมูลทั้งหมด เปรียบเหมือนสมองใหญ่ของเครื่องคอมพิวเตอร์"
+      },
+      {
+        id: 2,
+        category: 1,
+        text: "หน่วยความจำประเภทใดที่มีลักษณะเป็น Volatile Memory (ข้อมูลสูญหายเมื่อไม่มีกระแสไฟฟ้าเลี้ยง)?",
+        choices: [
+          "แรม (RAM)",
+          "รอม (ROM)",
+          "แฟลชไดรฟ์ (Flash Drive)",
+          "ฮาร์ดดิสก์ (Hard Disk)"
+        ],
+        answer: 0,
+        trick: "RAM = Random (สุ่มเก็บชั่วคราว) ข้อมูลจะอยู่แค่ตอนเปิดเครื่อง พอปิดไฟปุ๊บก็หายทันที",
+        explanation: "แรม (RAM) เป็นหน่วยความจำหลักชนิดอ่านและเขียนข้อมูลได้อย่างรวดเร็ว แต่เป็นชนิด Volatile ซึ่งไม่เสถียร ต้องมีกระแสไฟคอยจ่ายเลี้ยงตลอดเวลา ต่างจาก ROM และสื่อเก็บข้อมูลสำรองอื่นๆ"
+      },
+      {
+        id: 3,
+        category: 1,
+        text: "ข้อใดจัดเป็นอุปกรณ์ในหน่วยรับข้อมูล (Input Unit) ทั้งหมด?",
+        choices: [
+          "จอภาพ และ ลำโพง",
+          "เครื่องพิมพ์ และ พล็อตเตอร์",
+          "แป้นพิมพ์ และ เมาส์",
+          "ฮาร์ดดิสก์ และ เมนบอร์ด"
+        ],
+        answer: 2,
+        trick: "In แปลว่า เข้า อุปกรณ์อะไรก็ตามที่มือเราใช้กด/ขยับ เพื่อส่งคำสั่งเข้าเครื่องคืออินพุต",
+        explanation: "แป้นพิมพ์ (Keyboard) และเมาส์ (Mouse) จัดเป็นอุปกรณ์รับเข้าขั้นพื้นฐานที่ผู้ใช้งานใช้ส่งคำสั่งและข้อมูลเชิงกลเข้าคอมพิวเตอร์เพื่อแสดงผลลัพธ์ต่อไป"
+      },
+      {
+        id: 4,
+        category: 1,
+        text: "หน่วยความจุของข้อมูลในข้อใดมีขนาดใหญ่ที่สุดตามลำดับมาตรฐาน?",
+        choices: [
+          "เทราไบต์ (TB)",
+          "กิกะไบต์ (GB)",
+          "เมกะไบต์ (MB)",
+          "กิโลไบต์ (KB)"
+        ],
+        answer: 0,
+        trick: "ท่องลำดับจากเล็กไปใหญ่ Kilo -> Mega -> Giga -> Tera (เค-เอ็ม-จี-ที / โตสุดคือที)",
+        explanation: "ลำดับหน่วยความจุคอมพิวเตอร์เรียงจากเล็กไปใหญ่ได้แก่: KB (กิโลไบต์) < MB (เมกะไบต์) < GB (กิกะไบต์) < TB (เทราไบต์) ซึ่ง 1 TB มีขนาดประมาณ 1,024 GB"
+      },
+      {
+        id: 5,
+        category: 1,
+        text: "ซอฟต์แวร์ในข้อใดจัดอยู่ในกลุ่มซอฟต์แวร์ระบบ (System Software)?",
+        choices: [
+          "Microsoft Office Word",
+          "ระบบปฏิบัติการ Windows 11",
+          "Google Chrome Browser",
+          "Adobe Photoshop CC"
+        ],
+        answer: 1,
+        trick: "System = วางรากฐานระบบ ต้องลงเป็นตัวแรกเพื่อให้เครื่องสามารถตรวจบูตอุปกรณ์เพื่อเปิดทำงานได้",
+        explanation: "ระบบปฏิบัติการ (OS) เช่น Windows 11, macOS หรือ Linux จัดเป็นซอฟต์แวร์ระบบ ที่ทำหน้าที่ควบคุมประสานงานระหว่างฮาร์ดแวร์กับซอฟต์แวร์ประยุกต์อื่นๆ"
+      },
+      {
+        id: 6,
+        category: 1,
+        text: "ความเร็วในการทำงานของหน่วยประมวลผลกลาง (CPU) นิยมวัดด้วยหน่วยใด?",
+        choices: [
+          "เฮิรตซ์ (Hertz)",
+          "ไบต์ (Byte)",
+          "พิกเซล (Pixel)",
+          "บิต (Bit)"
+        ],
+        answer: 0,
+        trick: "ความเร็วคอมพิวเตอร์วัดด้วยจังหวะสัญญาณนาฬิกา (ความถี่) วัดเป็น Hz (ปัจจุบันนิยมใช้ GHz)",
+        explanation: "ความเร็ว CPU วัดจากความถี่สัญญาณนาฬิกา ยิ่งความถี่สูง ยิ่งสามารถประมวลผลขั้นตอนคำสั่งได้รวดเร็ว ปัจจุบันหน่วยมาตรฐานยอดนิยมคือจิกะเฮิรตซ์ (GHz)"
+      },
+      {
+        id: 7,
+        category: 1,
+        text: "หน่วยที่เล็กที่สุดในการจัดเก็บข้อมูลของระบบคอมพิวเตอร์คือข้อใด?",
+        choices: [
+          "ไบต์ (Byte)",
+          "บิต (Bit)",
+          "นิบเบิล (Nibble)",
+          "เวิร์ด (Word)"
+        ],
+        answer: 1,
+        trick: "Bit (บิต) เล็กสุดระดับอะตอม มีแค่ 0 หรือ 1 เมื่อรวมกันครบ 8 บิต จึงจะเท่ากับ 1 ไบต์",
+        explanation: "บิต (Bit - Binary Digit) เป็นหน่วยความจำที่เล็กที่สุด มีโอกาสเก็บสองสถานะคือ 0 หรือ 1 โดยเมื่อรวมตัวกัน 8 บิตจะพัฒนาขึ้นเป็นหน่วย 1 ไบต์ (Byte) สำหรับแทนอักขระ"
+      },
+      {
+        id: 8,
+        category: 1,
+        text: "อุปกรณ์คอมพิวเตอร์ในข้อใดทำหน้าที่ในหน่วยแสดงผลลัพธ์ (Output Unit)?",
+        choices: [
+          "สแกนเนอร์ (Scanner)",
+          "คีย์บอร์ด (Keyboard)",
+          "จอภาพ (Monitor)",
+          "แทร็กบอล (Trackball)"
+        ],
+        answer: 2,
+        trick: "Out แปลว่า ออก ส่งข้อมูลประมวลผลเสร็จออกมาให้เราสัมผัสผ่านตาหรือหู",
+        explanation: "จอภาพ (Monitor) รับข้อมูลภาพที่ประมวลผลเรียบร้อยแล้วนำมาจัดรูปแบบฉายภาพพิกเซลแสดงผลบนกระจกหน้าจอเพื่อให้มนุษย์มองเห็น"
+      },
+      {
+        id: 9,
+        category: 1,
+        text: "พอร์ตเชื่อมต่อยอดนิยมชนิดใดที่ย่อมาจากคำว่า 'Universal Serial Bus'?",
+        choices: [
+          "USB",
+          "HDMI",
+          "VGA",
+          "LAN"
+        ],
+        answer: 0,
+        trick: "Universal = สากล อเนกประสงค์ เสียบใช้งานข้ามอุปกรณ์ได้สะดวก ย่อสั้นๆ ว่า USB",
+        explanation: "USB (Universal Serial Bus) เป็นมาตรฐานพอร์ตอนุกรมอเนกประสงค์ ออกแบบขึ้นมาเพื่อรวมพอร์ตเชื่อมต่อเสริมภายนอกทุกชนิดเข้าไว้ด้วยกันในรูปทรงเดียว"
+      },
+      {
+        id: 10,
+        category: 1,
+        text: "การประมวลผลข้อมูลในลักษณะที่รวบรวมข้อมูลไว้ช่วงเวลาหนึ่งแล้วทำพร้อมกันทีเดียวเรียกว่าอะไร?",
+        choices: [
+          "Real-time Processing",
+          "Batch Processing",
+          "Online Processing",
+          "Multiprocessing"
+        ],
+        answer: 1,
+        trick: "Batch = เป็นเซ็ต/เป็นกอง เหมือนขนเสื้อผ้าไปซักทีเดียวตอนสิ้นเดือน ไม่ซักทันที",
+        explanation: "การประมวลผลแบบชุด (Batch Processing) เป็นการเก็บสะสมธุรกรรมข้อมูลเอกสารเอาไว้เป็นกลุ่มใหญ่จนครบตามช่วงเวลาที่กำหนดแล้วจึงรันคำนวณรวบยอดไปพร้อมกัน"
+      },
+      {
+        id: 11,
+        category: 1,
+        text: "หน่วยความจำความเร็วสูงที่ตั้งอยู่ใกล้หรือใน CPU เพื่อช่วยลดเวลาดึงข้อมูลจาก RAM เรียกว่าอะไร?",
+        choices: [
+          "หน่วยความจำสำรอง (Secondary Memory)",
+          "หน่วยความจำแคช (Cache Memory)",
+          "หน่วยความจำถาวร (ROM)",
+          "หน่วยความจำเสมือน (Virtual Memory)"
+        ],
+        answer: 1,
+        trick: "Cache (แคช) เปรียบเหมือนกระเป๋าเสื้อ หยิบใช้งานได้ไวกว่าการวิ่งไปหาในตู้หลัก (RAM)",
+        explanation: "หน่วยความจำแคช (Cache Memory) เป็นหน่วยความจำความเร็วส่งถ่ายระดับทรานซิสเตอร์ ตั้งอยู่ด้านข้างในชิป CPU เพื่อสำรองพักคำสั่งที่เรียกใช้บ่อยจาก RAM"
+      },
+      {
+        id: 12,
+        category: 1,
+        text: "ส่วนประกอบใดใน CPU ที่ทำหน้าที่คำนวณคณิตศาสตร์และตรรกศาสตร์เปรียบเทียบเชิงสัจพจน์?",
+        choices: [
+          "Control Unit (CU)",
+          "Arithmetic Logic Unit (ALU)",
+          "Register Unit",
+          "Bus Unit"
+        ],
+        answer: 1,
+        trick: "ยึดคำว่า A = Arithmetic (คำนวณเลข) + L = Logic (ตรรกะ) รวมกันเป็น ALU",
+        explanation: "ALU (Arithmetic Logic Unit - หน่วยคำนวณและตรรกะ) เป็นหัวใจสำคัญของ CPU มีหน้าที่บวก ลบ คูณ หาร และคิดตรรกะจริงหรือเท็จสำหรับเดินสายรันชุดคำสั่งถัดไป"
+      },
+      {
+        id: 13,
+        category: 1,
+        text: "ระบบตัวเลขฐานชนิดใดที่เครื่องคอมพิวเตอร์ใช้ในการประมวลผลและการจัดเก็บภายในกายภาพ?",
+        choices: [
+          "ระบบเลขฐานสอง",
+          "ระบบเลขฐานแปด",
+          "ระบบเลขฐานสิบ",
+          "ระบบเลขฐานสิบหก"
+        ],
+        answer: 0,
+        trick: "คอมพิวเตอร์เป็นระบบไฟฟ้า มีแค่สถานะสวิตช์ปิด (0) และสวิตช์เปิด (1) สองทาง จึงใช้เลขฐานสอง",
+        explanation: "เนื่องจากหน่วยย่อยในชิปสารกึ่งตัวนำคอมพิวเตอร์ทำงานด้วยสัญญาณไฟฟ้า จึงจำลองลักษณะสภาวะได้เพียง เปิด (1) หรือ ปิด (0) ระบบจึงจัดเก็บข้อมูลภายในด้วยเลขฐานสอง (Binary)"
+      },
+      {
+        id: 14,
+        category: 1,
+        text: "อุปกรณ์จัดเก็บข้อมูลในข้อใด 'ไม่จัดเป็น' หน่วยความจำสำรอง (Secondary Storage)?",
+        choices: [
+          "ฮาร์ดดิสก์ (Hard Disk Drive)",
+          "เอสเอสดี (Solid State Drive)",
+          "แรม (Random Access Memory)",
+          "แฟลชไดรฟ์ (Flash Drive)"
+        ],
+        answer: 2,
+        trick: "แรม (RAM) เป็นหน่วยความจำ 'หลัก' ทำงานคู่กับ CPU โดยตรง ส่วนที่เหลือคือหน่วยความจำสำรอง (เก็บถาวร)",
+        explanation: "แรม (RAM) คือ หน่วยความจำหลักความเร็วสูงที่ทำงานประสานงานคู่กับโปรเซสเซอร์โดยตรง ส่วนฮาร์ดดิสก์ เอสเอสดี และแฟลชไดรฟ์จัดเป็นอุปกรณ์บันทึกข้อมูลระยะยาวถาวรซึ่งอยู่ในหมวดความจำสำรอง"
+      },
+      {
+        id: 15,
+        category: 1,
+        text: "แผงวงจรอิเล็กทรอนิกส์ขนาดใหญ่ที่เป็นศูนย์รวมและเชื่อมประสานอุปกรณ์หลักคอมพิวเตอร์เข้าด้วยกันเรียกว่าอะไร?",
+        choices: [
+          "แผงวงจรหลัก (Mainboard)",
+          "การ์ดแสดงผล (Video Card)",
+          "หม้อแปลงไฟฟ้า (Power Supply)",
+          "แผงระบายความร้อน (Heatsink)"
+        ],
+        answer: 0,
+        trick: "Main แปลว่า แกนหลัก เมนบอร์ดคือบอร์ดแม่แผงใหญ่ที่สุดที่ลิงก์เชื่อมต่อชิปทุกชิ้นในเครื่อง",
+        explanation: "แผงวงจรหลัก (Mainboard หรือ Motherboard) เป็นหัวใจด้านสถาปัตยกรรมกายภาพของคอมพิวเตอร์ คอยจ่ายไฟเลี้ยงและเชื่อมสายสัญญาณนำข้อมูลส่งไปยังชิปต่างๆ"
+      },
+      {
+        id: 16,
+        category: 1,
+        text: "ซอฟต์แวร์ประเภทใดที่ผู้พัฒนาเปิดเผยโครงสร้างอนุญาตให้นำไปปรับใช้ แก้ไข และแจกจ่ายโค้ดโปรแกรมต้นฉบับได้ฟรี?",
+        choices: [
+          "โอเพนซอร์ส (Open Source)",
+          "แชร์แวร์ (Shareware)",
+          "ฟรีแวร์ (Freeware)",
+          "ซอฟต์แวร์เชิงพาณิชย์"
+        ],
+        answer: 0,
+        trick: "Open = เปิดเผยซอร์สโค้ด ไม่ล็อคแม่แบบ ทั่วโลกจึงสามารถปรับปรุงประยุกต์ใช้งานได้อิสระ",
+        explanation: "ซอฟต์แวร์รหัสเปิด (Open Source Software) เปิดเผยซอร์สโค้ด (Source Code) ให้นักพัฒนาทั่วโลกนำไปศึกษา ปรับปรุงพัฒนา และแชร์แจกจ่ายกันต่ออย่างปลอดภัยโดยไม่มีลิขสิทธิ์ผื่อขาด"
+      },
+      {
+        id: 17,
+        category: 1,
+        text: "โปรแกรมระบบขนาดเล็กที่ติดตั้งตายตัวในชิปบนเมนบอร์ด ทำหน้าที่บูตเริ่มต้นและตรวจสอบอุปกรณ์คอมพิวเตอร์ตอนเปิดเครื่องคืออะไร?",
+        choices: [
+          "ไดรเวอร์ (Driver)",
+          "ไบออส (BIOS)",
+          "ยูทิลิตี้ (Utility)",
+          "เคอร์เนล (Kernel)"
+        ],
+        answer: 1,
+        trick: "BIOS (Basic Input/Output System) สลักอยู่ในบอร์ด ทำหน้าที่ 'ปลุกเครื่อง' ตรวจเช็คฮาร์ดแวร์ตอนกดปุ่มเปิด",
+        explanation: "BIOS เป็นเฟิร์มแวร์พื้นฐานที่ตรวจบูตรันฮาร์ดแวร์รอบเครื่อง (POST) ว่าอยู่ในสภาวะสมบูรณ์ดี ก่อนที่จะดึงสัญญาณข้อมูลของระบบปฏิบัติการขึ้นมาเปิดสู่จอหลัก"
+      },
+      {
+        id: 18,
+        category: 1,
+        text: "ตัวเลือกข้อใดในระบบคอมพิวเตอร์ 'ไม่ใช่' อุปกรณ์ประเภทฮาร์ดแวร์ (Hardware)?",
+        choices: [
+          "หน่วยประมวลผลกราฟิก (GPU)",
+          "อุปกรณ์สำรองไฟ (UPS)",
+          "ระบบปฏิบัติการ (Operating System)",
+          "แผงวงจรความจำ (RAM Module)"
+        ],
+        answer: 2,
+        trick: "Hardware = สิ่งแข็งๆ ที่มือจับต้องสัมผัสโครงสร้างได้ ส่วน OS เป็นโปรแกรมรหัสคำสั่ง = Software",
+        explanation: "ระบบปฏิบัติการ (OS - Operating System) เป็นชุดคำสั่งสัญลักษณ์รหัสระบบที่ไม่สามารถใช้มือลูบสัมผัสทางกายภาพได้ จึงจัดเป็นกลุ่มซอฟต์แวร์ ไม่ใช่ฮาร์ดแวร์"
+      },
+      {
+        id: 19,
+        category: 1,
+        text: "อุปกรณ์ตัวใดทำหน้าที่อ่านชุดรหัสและสัญญาณข้อมูลจากแผ่นจานแสง (Optical Disc) ด้วยสายเลเซอร์สะท้อน?",
+        choices: [
+          "ซีดีรอมไดรฟ์ (CD-ROM Drive)",
+          "ฮาร์ดดิสก์ไดรฟ์ (Hard Disk Drive)",
+          "ฟล็อปปี้ดิสก์ไดรฟ์",
+          "เทปไดรฟ์"
+        ],
+        answer: 0,
+        trick: "เจอคำว่า จานแสง (Optical) ให้นึกถึงแผ่นดิสก์ใสๆ วาวๆ ที่ต้องใช้เครื่องอ่านตระกูล CD/DVD-ROM",
+        explanation: "CD-ROM / DVD Drive ใช้หัวอ่านเลเซอร์ยิงตกกระทบบนผิวแผ่นจานแสงเพื่ออ่านการสะท้อนรอยหลุมเล็กๆ แล้วแปลงค่ากลับขึ้นมาเป็นสัญญาณดิจิทัล"
+      },
+      {
+        id: 20,
+        category: 1,
+        text: "สัญญาณชีพจรประสานงานการประมวลผลขั้นตอนคำสั่งความถี่ภายใน CPU เรียกว่าอะไร?",
+        choices: [
+          "สัญญาณนาฬิกา (Clock Speed)",
+          "สัญญาณบัส (Bus)",
+          "สัญญาณวิทยุ",
+          "สัญญาณแอมพลิจูด"
+        ],
+        answer: 0,
+        trick: "ตัวชี้นำความเร็วบอกรอบจังหวะ เปรียบเหมือนจังหวะวินาทีนาฬิกา ยิ่งเร็วยิ่งคิดไว",
+        explanation: "สัญญาณนาฬิกา (System Clock) ปลดปล่อยจังหวะไฟฟ้าเพื่อประสานการทำงานคำสั่งในวงจรรวมให้เดินทางพร้อมเพรียงกัน ความเร็วรอบนิยมวัดกันเป็นหน่วยเมกะเฮิรตซ์ (MHz) หรือ จิกะเฮิรตซ์ (GHz)"
+      },
+
+      // CATEGORY 2: Data Communication and Networking (หมวดที่ 2)
+      {
+        id: 21,
+        category: 2,
+        text: "โครงสร้างหรือเครือข่ายคอมพิวเตอร์ที่เชื่อมโยงระบบพนักงานจำกัดพื้นที่ในตึกอาคารเดียวกันคืออะไร?",
+        choices: [
+          "เครือข่ายแวน (WAN)",
+          "เครือข่ายแมน (MAN)",
+          "เครือข่ายแลน (LAN)",
+          "เครือข่ายแพน (PAN)"
+        ],
+        answer: 2,
+        trick: "LAN = Local (ท้องถิ่น/ตึกเดียวกัน) วงเชื่อมโยงระยะสั้นที่เสถียรที่สุดในสำนักงาน",
+        explanation: "LAN (Local Area Network) คือระบบเครือข่ายเชื่อมต่อสายตรงและสื่อสัญญาณข้อมูลแบบท้องถิ่น นิยมใช้เดินระบบประสานข้อมูลภายในห้อง แผนก ตึกสำนักงาน หรือโรงเรียนเดียวกัน"
+      },
+      {
+        id: 22,
+        category: 2,
+        text: "ระบบการสื่อสารข้อมูลของเครือข่ายจำพวกวิทยุกระจายเสียง จัดอยู่ในทิศทางการสื่อสารลักษณะใด?",
+        choices: [
+          "สื่อสารทิศทางเดียว (Simplex)",
+          "สื่อสารสองทิศทางสลับกัน (Half Duplex)",
+          "สื่อสารสองทิศทางพร้อมกัน (Full Duplex)",
+          "สื่อสารหลายทิศทาง"
+        ],
+        answer: 0,
+        trick: "Simplex = ทิศทางเดียวเหมือนขี่รถทางวันเวย์ มีผู้พูดส่งสารกับผู้รับสารปลายทางฝ่ายเดียวเถียงกลับไม่ได้",
+        explanation: "การส่งแบบทิศทางเดียว (Simplex) มีสัญญาณข้อมูลเดินทางจากแหล่งกำเนิดไปยังอุปกรณ์ปลายทางในมิติเดียวตลอดกาล เช่น วิทยุ โทรทัศน์ หรือแป้นพิมพ์ส่งค่าไปเคสเครื่อง"
+      },
+      {
+        id: 23,
+        category: 2,
+        text: "อุปกรณ์หรือวิทยุสื่อสารพกพา (Walkie-Talkie) มีหลักการแชร์ทิศทางส่งข้อมูลรูปแบบใด?",
+        choices: [
+          "ทิศทางเดียว (Simplex)",
+          "สองทิศทางสลับกันทำงาน (Half Duplex)",
+          "สองทิศทางส่งรับพร้อมกัน (Full Duplex)",
+          "แบบแมนนวลร้อยเปอร์เซ็นต์"
+        ],
+        answer: 1,
+        trick: "Half Duplex = กึ่งสองทาง พูดโต้ตอบกันได้แต่ต้องผลัดกันพูดส่งสัญญาณ ห้ามแย่งพูดแทรกสวนกัน",
+        explanation: "วิทยุสื่อสาร วอ. ใช้การทำงานแบบ Half Duplex สื่อสารโต้ตอบกันได้ทั้งสองทาง แต่ในเวลาหนึ่งๆ จะมีผู้กดส่งสัญญาณคลื่นเพื่อพูดได้เพียงช่องสัญญาณเดียว อีกฝั่งต้องอยู่ในสภาวะคอยรับฟัง"
+      },
+      {
+        id: 24,
+        category: 2,
+        text: "การคุยโทรศัพท์เคลื่อนที่ทั่วไป มีกลไกการรับส่งข้อมูล in ทิศทางลักษณะใด?",
+        choices: [
+          "แบบทิศทางเดียวตลอดการรัน",
+          "แบบสลับจังหวะการรับส่ง",
+          "แบบสองทิศทางได้พร้อมกัน (Full Duplex)",
+          "แบบจำกัดเวลาตอบสนอง"
+        ],
+        answer: 2,
+        trick: "Full Duplex = คุยโต้ตอบพูดสวนประสานเสียงโต้ตอบกลับมาได้ทันควันในช่องเดียวกัน",
+        explanation: "การโทรศัพท์เคลื่อนที่ทำงานด้วยหลักการ Full Duplex อุปกรณ์ปลายทางทั้งสองข้างสามารถส่งและรับคลื่นสัญญาณผ่านความถี่อิสระไปกลับพร้อมๆ กันได้โดยไม่ต้องเปลี่ยนสถานะโหมด"
+      },
+      {
+        id: 25,
+        category: 2,
+        text: "สัญญาณคลื่นเสียงธรรมชาติที่มีสัณฐานต่อเนื่อง เปลี่ยนระดับแรงดันไปตามมิติเวลาที่เปลี่ยนแปลงคือข้อใด?",
+        choices: [
+          "สัญญาณแอนะล็อก (Analog Signal)",
+          "สัญญาณดิจิทัล (Digital Signal)",
+          "สัญญาณคลื่นความร้อน",
+          "สัญญาณพัลส์แรงดันคงที่"
+        ],
+        answer: 0,
+        trick: "คลื่นต่อเนื่องสมูทตามเวลา = แอนะล็อก (ธรรมชาติ)",
+        explanation: "สัญญาณแอนะล็อก (Analog) มีความต่อเนื่องทางไฟฟ้า แรงดันไฟฟ้าหรือสัญญาณความถี่ไหลขึ้นลงตามจังหวะเวลาอย่างไม่ขาดตอน เป็นธรรมชาติของเสียง แสง และอุณหภูมิ"
+      },
+      {
+        id: 26,
+        category: 2,
+        text: "หน่วยมาตรฐานในการวัดประเมินความเร็วของการส่งถ่ายเคลื่อนย้ายบิตข้อมูลผ่านสายเครือข่ายคืออะไร?",
+        choices: [
+          "บิตต่อวินาที (bps)",
+          "เฮิรตซ์ต่อวินาที (Hz/s)",
+          "รอบต่อนาที (RPM)",
+          "พิกเซลต่อหน้าภาพ"
+        ],
+        answer: 0,
+        trick: "bps = bits per second นับจำนวนบิตสัญญาณดิจิทัลที่เดินทางผ่านสายข้ามฝั่งภายใน 1 วินาที",
+        explanation: "ความเร็วรับส่งข้อมูลในระบบเน็ตเวิร์กใช้หน่วย bps ยิ่งเลขหน้ามากเท่าใด เช่น Mbps (เมกะบิตต่อวินาที) หรือ Gbps (จิกะบิตต่อวินาที) ข้อมูลยิ่งดาวน์โหลดได้เสร็จรวดเร็ว"
+      },
+      {
+        id: 27,
+        category: 2,
+        text: "สื่อนำสัญญาณประเภทสายนำผ่านชนิดใดที่มีคุณสมบัติสูญเสียกำลังกระเพื่อมต่ำสุดในระยะทางไกล?",
+        choices: [
+          "สายคู่บิดเกลียวแบบมีเกราะ (STP)",
+          "สายโคแอกเชียลแกนทองแดงเดี่ยว",
+          "สายใยแก้วนำแสง (Fiber Optic)",
+          "สายคู่บิดเกลียวไร้เกราะ (UTP)"
+        ],
+        answer: 2,
+        trick: "Fiber Optic = แสง เลเซอร์วิ่งเร็วที่สุดในสัจธรรมความปลอดภัย และไม่โดนคลื่นแม่เหล็กกวน",
+        explanation: "สายใยแก้วนำแสง (Fiber Optic) ใช้เส้นแก้วควอตซ์นำส่งแสงสะท้อนภายใน ปราศจากการรบกวนของคลื่นไฟฟ้า ทำให้อัตราสูญเสียสัญญาณต่ำมากในระยะเดินทางข้ามประเทศข้ามทะเล"
+      },
+      {
+        id: 28,
+        category: 2,
+        text: "ข้อเสียเปรียบและข้อจำกัดสำคัญของสายแลนคู่บิดเกลียวแบบไร้เกาะหุ้มชีลด์ฟอยล์ (UTP) คืออะไร?",
+        choices: [
+          "ราคาแพงและมีน้ำหนักมากเกินเดินสาย",
+          "ถูกคลื่นภายนอกและไฟฟ้าเหนี่ยวนำรบกวนได้ง่าย",
+          "ระยะเชื่อมต่อสายสั้นไม่เกินสิบเซนติเมตร",
+          "จำกัดเฉพาะงานคำนวณทางทหารเท่านั้น"
+        ],
+        answer: 1,
+        trick: "Unshielded (U) = ไร้ชุดเกราะหุ้มฟอยล์ ทำให้คลื่นแม่เหล็กและสายไฟฟ้าข้างๆ รบกวนสัญญาณข้อมูลข้างในง่าย",
+        explanation: "สาย UTP มักใช้ภายในสำนักงานเพราะราคาประหยัด แต่ด้วยความที่ไม่มีแผ่นชีลด์ป้องกัน สัญญาณคลื่นข้อมูลข้างในจึงอาจเพี้ยนบิดเบี้ยวได้เมื่อวางพาดเบียดชิดกับสายส่งไฟฟ้าแรงดันสูง"
+      },
+      {
+        id: 29,
+        category: 2,
+        text: "สื่อสัญญาณไร้สายประเภทใดที่ต้องวางอุปกรณ์แนวรับหน้าตรงห้ามมีเขากลุ่มหินหรือตึกอุปสรรคมาบังทางคลื่น?",
+        choices: [
+          "คลื่นวิทยุกระจายทางโค้ง",
+          "คลื่นไมโครเวฟเชื่อมจุด (Microwave)",
+          "บลูทูธส่วนบุคคล",
+          "ไวไฟวงย่อย"
+        ],
+        answer: 1,
+        trick: "ไมโครเวฟ = สัญญาณแบบ Line-of-Sight หน้าต่างตามองตรงหากัน ห้ามมีเขาสูงหรือตึกขวางตรงกลาง",
+        explanation: "การส่งสัญญาณไมโครเวฟมีจังหวะความถี่สูง ทิศทางวิ่งเป็นหน้าตรงเป็นเป้าเดี่ยว (Point-to-Point) จึงจำเป็นต้องปักโครงสถานีจานรับบนยอดเขาหรือหอคอยสูงเพื่อให้เล็งหาจานปลายทางได้ตรงพิกัดโดยไม่มีอะไรบัง"
+      },
+      {
+        id: 30,
+        category: 2,
+        text: "อุปกรณ์เครือข่ายชนิดใดฉลาดกว่าฮับ (Hub) โดยสามารถสแกนพิกัดจัดเก็บแผนผังส่งสัญญาณข้อมูลตรงไปพอร์ตปลายทางโดยเฉพาะ?",
+        choices: [
+          "ฮับแมนนวล",
+          "สวิตช์แลน (Switch)",
+          "เราเตอร์หาเส้นทาง",
+          "เกตเวย์ตัวกลาง"
+        ],
+        answer: 1,
+        trick: "Switch = ฉลาดกว่าฮับ โดยการจำ MAC Address เพื่อเลือกโยนข้อมูลเฉพาะเส้นสายเป้าหมายเพื่อลดปัญหาจราจรติดขัดในสายแลน",
+        explanation: "สวิตช์ทำงานในระดับ Data Link Layer สามารถสแกนและบันทึกข้อมูลทางกายภาพ (MAC Address) ทำให้เล็งเป้าส่งข้อมูลหากล่องสายเป้าหมายได้อย่างแม่นยำ ไม่ตะโกนป่าวประกาศหว่านแหเหมือนฮับ"
+      },
+      {
+        id: 31,
+        category: 2,
+        text: "อุปกรณ์สื่อสารเครือข่ายระดับสากลที่มีกระบวนการแกนหลักในการวิเคราะห์คำนวณสืบหาเส้นทางเดินข้อมูลที่ดีและรวดเร็วที่สุดข้ามเครือข่าย?",
+        choices: [
+          "สวิตช์แลน",
+          "ฮับรวมพอร์ต",
+          "เราเตอร์ (Router)",
+          "การ์ดอินเตอร์เฟสคอมพิวเตอร์"
+        ],
+        answer: 2,
+        trick: "Router ยึดจากคำว่า Route (เส้นทางสายหลวง) คอยบอกทิศทางข้อมูลและแยกประเภทไอพีข้ามเครือข่ายอื่น",
+        explanation: "เราเตอร์ (Router) ทำหน้าที่ตรวจสอบไอพีต้นทางและปลายทาง (IP Address) นำมาเทียบแผนที่ระบบเครือข่ายภายนอก (Routing Table) เพื่อชี้เป้าเลือกทางที่ดีที่สุดให้ข้อมูลเดินทางผ่านอินเทอร์เน็ต"
+      },
+      {
+        id: 32,
+        category: 2,
+        text: "หมายเลขไอดีกายภาพ (MAC Address) ประจำแผ่นการ์ดแลน มีคุณสมบัติเด่นตามสัจธรรมเรื่องใด?",
+        choices: [
+          "เปลี่ยนค่าเองทันทีที่บูตเครื่องสำเร็จ",
+          "ถูกสลักฝังติดตัวมาจากผู้ผลิตโรงงานชิปและไม่มีสิทธิ์ซ้ำกับเครื่องใดในโลก",
+          "มีขนาดความจุในการเก็บภาพถ่ายสูงมาก",
+          "ยึดโยงข้อมูลการพิมพ์ข้อความกระดาษเท่านั้น"
+        ],
+        answer: 1,
+        trick: "MAC Address = เลขบัตรประชาชนของอุปกรณ์ไอที เปลี่ยนค่าถาวรไม่ได้ ติดตัวการ์ดแลนมาตั้งแต่แรกเกิด",
+        explanation: "MAC Address (Media Access Control) มีขนาดความยาว 48 บิต สลักอยู่ในรอมของชิปการ์ดเครือข่าย มีสถานะระบุข้อมูลตัวเครื่องแต่ละใบไม่ซ้ำกันเด็ดขาดในโลกสากล"
+      },
+      {
+        id: 33,
+        category: 2,
+        text: "แบบจำลองสถาปัตยกรรมมาตรฐานของเลเยอร์สื่อสารข้อมูล OSI Model มีสัดส่วนการแบ่งการทำงานออกเป็นกี่ชั้น?",
+        choices: [
+          "แบ่งทั้งหมด 5 เลเยอร์ย่อย",
+          "แบ่งทั้งหมด 6 เลเยอร์ย่อย",
+          "แบ่งมาตรฐานสากล 7 ชั้น (Layers)",
+          "แบ่งมาตรฐานสากล 8 ชั้น (Layers)"
+        ],
+        answer: 2,
+        trick: "OSI Model = 7 ชั้นสวรรค์ มาตรฐานระบบสื่อสารข้อมูลสากล ท่องจำไว้เลยว่า 7 ชั้น",
+        explanation: "OSI Model (Open Systems Interconnection) ถูกออกแบบโดย ISO เพื่อจัดหมวดขั้นตอนการคุยสื่อสารข้อมูลของคอมพิวเตอร์ต่างค่ายให้เป็นไปตามกติกาแบบสากล โดยแบ่งระบบออกเป็น 7 เลเยอร์ชัดเจน"
+      },
+      {
+        id: 34,
+        category: 2,
+        text: "ใน OSI Model ชั้นแรกสุดล่างสุดที่กำกับควบคุมสัญญาณจังหวะไฟฟ้า ขั้วสายแลน และแรงดันไฟฟ้าคืออะไร?",
+        choices: [
+          "Physical Layer (ชั้นกายภาพ)",
+          "Data Link Layer",
+          "Network Layer",
+          "Transport Layer"
+        ],
+        answer: 0,
+        trick: "Physical = กายภาพ สิ่งที่สายตาสามารถมองเห็นจับต้องได้ เช่น หัวสายแลน หัวสัญญาณ กระแสไฟฟ้า",
+        explanation: "Physical Layer (เลเยอร์ที่ 1) คือรากฐานกายภาพ ทำงานสกัดสัญญาณไฟฟ้า แสง หรือความถี่คลื่นให้กลับมารูปบิตข้อมูลดิบ 0 และ 1"
+      },
+      {
+        id: 35,
+        category: 2,
+        text: "อุปกรณ์รีพีตเตอร์ (Repeater) ในระบบเครือข่ายมีหน้าที่ทางกลไกในการทำงานเรื่องใดเป็นหลัก?",
+        choices: [
+          "ทวนสัญญาณและบูสต์คลื่นไฟฟ้าให้กลับมาแรงและเดินทางไปได้ไกลขึ้น",
+          "แปลงรหัสฟอนต์ตัวหนังสือต่างดาว",
+          "ตรวจสอบไวรัสขโมยระบบการเงิน",
+          "สแกนเอกสารเข้าสู่ระบบฐานข้อมูล"
+        ],
+        answer: 0,
+        trick: "Repeat = สั่งซ้ำ/ทำซ้ำ ทวนและปั๊มสัญญาณคลื่นข้อมูลที่จืดจางให้กลับมาฟิตปั๋งมีกำลังส่งข้ามสายได้ไกล",
+        explanation: "เมื่อสัญญาณส่งผ่านสายแลน UTP เกินระยะทางมาตรฐาน 100 เมตร กำลังไฟฟ้าจะเริ่มอ่อนล้า อุปกรณ์ Repeater จะรับสัญญาณจืดจางนั้นมาสลัดทิ้งสัญญาณรบกวนและเพิ่มแรงดันไฟฟ้ากลับมาเต็มพิกัดส่งต่อไปได้ไกลขึ้น"
+      },
+      {
+        id: 36,
+        category: 2,
+        text: "หัวขั้วเชื่อมต่อสายแลนมาตรฐานในระดับสำนักงานและโรงเรียนทั่วไปคือข้อใด?",
+        choices: [
+          "หัวขั้วประเภท RJ-11",
+          "หัวขั้วประเภท RJ-45",
+          "หัวขั้วประเภท BNC ยุคเก่า",
+          "หัวทองเหลืองสตูดิโอ"
+        ],
+        answer: 1,
+        trick: "RJ-45 = 8 แกนพินหัวโตสำหรับสายแลนอินเทอร์เน็ต ส่วน RJ-11 = 4 แกนพินหัวเล็กใช้สายโทรศัพท์บ้านเดิม",
+        explanation: "หัวขั้วต่อ RJ-45 (Registered Jack 45) เป็นขั้วปลายสายชนิดแปดพินสัมผัส ออกแบบมาเพื่อใช้งานร่วมกับสายคู่บิดเกลียวประเภท CAT5, CAT6 เพื่อเชื่อมโครงข่ายสายแลน"
+      },
+      {
+        id: 37,
+        category: 2,
+        text: "เครือข่ายไร้สายระยะสั้นขอบเขตต่ำที่นิยมสร้างสรรค์นำมาแชร์ไฟล์หรือลิงก์เชื่อมโยงเมาส์บลูทูธเรียกว่าอะไร?",
+        choices: [
+          "ระบบดาวเทียมวงโคจรต่ำ",
+          "ระบบเครือข่ายส่วนบุคคลไร้สาย (WPAN - Wireless PAN)",
+          "ระบบเครือข่ายระดับอำเภอ",
+          "ระบบอินทราเน็ตควบคุมเฉพาะรัฐบาล"
+        ],
+        answer: 1,
+        trick: "PAN = Personal Area Network เชื่อมต่อรอบร่างกายเรา ระยะไม่เกิน 10 เมตร เช่น หูฟังบลูทูธหรือเมาส์ไร้สาย",
+        explanation: "WPAN เป็นระบบเชื่อมต่ออุปกรณ์ไร้สายส่วนบุคคลโดยรอบตัวเรา ระยะสั้นต่ำและเน้นเชื่อมแบบจุดต่อจุดเพื่อลดกำลังงานแบตเตอรี่ เทคโนโลยีหลักที่ใช้คือ บลูทูธ (Bluetooth)"
+      },
+      {
+        id: 38,
+        category: 2,
+        text: "เกตเวย์ (Gateway) ในสถาปัตยกรรมโครงสร้างระบบเครือข่ายเปรียบเสมือนสิ่งใด?",
+        choices: [
+          "ประตูเมืองหรือประตูผ่านทางในการนำเสนอเชื่อมต่อสองเครือข่ายที่ใช้ระบบ/โปรโตคอลต่างกัน",
+          "สายสัญญาณแก้วที่ไม่มีวันขาด",
+          "เครื่องเซิร์ฟเวอร์รหัสผ่านเครื่องสำรองไฟ",
+          "ฐานเครื่องสแกนเอกสารนำเข้ารวม"
+        ],
+        answer: 0,
+        trick: "Gateway = ประตูเชื่อมด่านใหญ่ คลี่คลายเรื่องแปลกหน้า ยอมปรับโครงสร้างให้คุยข้ามโปรโตคอลแปลกถิ่นได้เข้าใจ",
+        explanation: "เกตเวย์ (Gateway) ทำงานทำหน้าที่แปลงโครงสร้างค่านำส่งข้อมูลระบบโปรโตคอลเครือข่ายที่ใช้มาตรฐานต่างกันโดยสิ้นเชิง เช่น เชื่อมโยงวงเน็ตเวิร์กภายในระดับองค์กรเข้าหาโครงข่ายสารสนเทศภายนอก"
+      },
+      {
+        id: 39,
+        category: 2,
+        text: "หมายเลขไอพีแอดเดรสยอดนิยมเวอร์ชัน 4 (IPv4) มีความยาวชุดรหัสระบุตำแหน่งกี่บิต?",
+        choices: [
+          "ความยาวพิกัด 32 บิต",
+          "ความยาวพิกัด 64 บิต",
+          "ความยาวพิกัด 128 บิต",
+          "ความยาวพิกัด 256 บิต"
+        ],
+        answer: 0,
+        trick: "IPv4 = 32 บิต แบ่งโครงสร้างตัวเลขออกเป็น 4 ชุด คั่นจดจำด้วยสัญลักษณ์จุด (เช่น 192.168.1.1)",
+        explanation: "IPv4 มีขนาดโครงสร้างยาว 32 บิต แบ่งออกเป็นเลขสี่ส่วนหลักโดยสัดส่วนพอยต์ตัวเลขฐานสองแต่ละก้อนจะมีขนาดก้อนละ 8 บิต (1 ไบต์) สำหรับแจกจ่ายกำหนดไอพียี่ห้อเครื่องต่างๆ"
+      },
+      {
+        id: 40,
+        category: 2,
+        text: "การขยายชุดเลขจัดสรรไอพีจาก IPv4 (32 บิต) มาสู่สถาปัตยกรรม IPv6 (128 บิต) มุ่งเน้นการแก้ปัญหาใดเป็นหลัก?",
+        choices: [
+          "แก้ไขเรื่องแอมพลิจูดความร้อนในเครื่องประมวลผลสูง",
+          "แก้ไขวิกฤตขาดแคลนหมายเลขไอพีแอดเดรสสำหรับอุปกรณ์ดิจิทัลทั่วโลก",
+          "แก้ไขปัญหาสายแลนเสื่อมสภาพเร็ว",
+          "สกัดปัญหาการเชื่อมสายทีวีรุ่นเก่า"
+        ],
+        answer: 1,
+        trick: "IPv6 = มหาศาล ขยายชุดตัวเลขรองรับยุคของทุกอย่างต่ออินเทอร์เน็ต (IoT) แก้ปัญหาพิกัดไอพีเดิมหมดโลก",
+        explanation: "เนื่องจากการเปิดให้บริการของอุปกรณ์ยุคใหม่ล้นหลามขึ้น สัญญาณ IPv4 ที่มีพิกัดพอกรอกได้ประมาณ 4 พันล้านเบอร์กำลังขาดแคลนลง การใช้ระบบ IPv6 (128 บิต) จะสร้างไอดีให้กล่องสรรพสิ่งได้จำนวนมหาศาล"
+      },
+
+      // CATEGORY 3: Microsoft Office Skills (หมวดที่ 3)
+      {
+        id: 41,
+        category: 3,
+        text: "ในแอปพลิเคชัน Microsoft Word กลุ่มแท็บคำสั่งด้านบนหน้าจอแท็บใดใช้สำหรับตั้งระยะกระดาษแนวขอบ?",
+        choices: [
+          "แท็บ หน้าแรก (Home)",
+          "แท็บ แทรก (Insert)",
+          "แท็บ เค้าโครง (Layout)",
+          "แท็บ มุมมอง (View)"
+        ],
+        answer: 2,
+        trick: "Layout = จัดวางภาพรวม จัดวางกระดาษ ตั้งระยะเว้นขอบกระดาษ ระยะกระดาษเยื้อง",
+        explanation: "การปรับตั้งสัดส่วนพื้นที่หน้าเอกสาร เช่น ปรับตั้งขนาดกระดาษ (A4, Letter) ขยายระยะห่างขอบกระดาษขอบซ้ายขอบขวา และปรับตั้งแนวกระดาษแนวตั้งแนวนอน อยู่ในเมนูหลัก Layout"
+      },
+      {
+        id: 42,
+        category: 3,
+        text: "ปุ่มคีย์ลัดสากลบนแป้นพิมพ์ใดที่ทำหน้าที่เลือกข้อความหรือองค์ประกอบวัตถุในระบบพร้อมกันทั้งหมด?",
+        choices: [
+          "ปุ่ม Ctrl + A",
+          "ปุ่ม Ctrl + C",
+          "ปุ่ม Ctrl + V",
+          "ปุ่ม Ctrl + Z"
+        ],
+        answer: 0,
+        trick: "Ctrl + A = Select All รวมข้อความทุกหน้า ทุกบรรทัด ทุกกล่องวัตถุในคลิกเดียว",
+        explanation: "คีย์ลัดสำหรับสั่งเลือกวัตถุและตัวหนังสือทั้งหมดในโปรเจกต์งานที่กำลังรันในแผงหน้าจอพิมพ์คือ Ctrl + A (All)"
+      },
+      {
+        id: 43,
+        category: 3,
+        text: "หากทำข้อผิดพลาดระหว่างลบประโยคงานพิมพ์ แล้วต้องการย้อนคำสั่งย้อนเวลากลับมาควรใช้ปุ่มคีย์ลัดใด?",
+        choices: [
+          "ปุ่ม Ctrl + X",
+          "ปุ่ม Ctrl + Y",
+          "ปุ่ม Ctrl + S",
+          "ปุ่ม Ctrl + Z"
+        ],
+        answer: 3,
+        trick: "Ctrl + Z = ย้อนคำสั่งย้อนกลับไปข้างหลังกู้คำที่พิมพ์พลาดให้ฟื้นคืนกลับมาทันที",
+        explanation: "การถอยหลังระบบคืนสถานะคำสั่งก่อนเกิดความผิดพลาด (Undo) ในระบบวินโดวส์และชุดโปรแกรมสำนักงานสากลจะผูกรหัสปุ่มสั่งงานไว้ที่ Ctrl + Z"
+      },
+      {
+        id: 44,
+        category: 3,
+        text: "เมื่อต้องการสั่งจัดเรียงรูปภาพย่อหน้าข้อความที่เลือกให้ขยับมาตั้งอยู่ตรงกึ่งกลางเอกสารพอดีใช้ปุ่มลัดใด?",
+        choices: [
+          "ปุ่ม Ctrl + L",
+          "ปุ่ม Ctrl + E",
+          "ปุ่ม Ctrl + R",
+          "ปุ่ม Ctrl + J"
+        ],
+        answer: 1,
+        trick: "Ctrl + E = cEnter จัดข้อความอยู่กึ่งกลาง",
+        explanation: "การจัดแนวพิมพ์กึ่งกลางหน้ากระดาษ (Center Alignment) ในเอกสาร Microsoft Word ใช้คีย์ลัดสั่งงานคือ Ctrl + E"
+      },
+      {
+        id: 45,
+        category: 3,
+        text: "ฟังก์ชันหลักใดในโปรแกรม Word ที่ใช้อำนสะดวกในการจัดส่งจดหมายฉบับเดียวกันหาผู้รับจำนวนมากโดยระบบเปลี่ยนชื่อให้เอง?",
+        choices: [
+          "จดหมายเวียน (Mail Merge)",
+          "ระบบสารบัญอัตโนมัติ",
+          "ระบบดัชนีภาพอ้างอิง",
+          "หน้าว่างกึ่งกลาง"
+        ],
+        answer: 0,
+        trick: "Mail Merge = ลิงก์ตารางรายชื่อ ทำจดหมายโครงร่างครั้งเดียว ระบบสแกนพ่นรายชื่อกรอกซองจดหมายให้อัตโนมัติ",
+        explanation: "จดหมายเวียน (Mail Merge) เป็นเครื่องมือเชื่อมผสานเอกสารคำและตารางข้อมูลรายชื่อ (เช่น จาก Excel) เพื่อผลิตจดหมายหรือเกียรติบัตรระบุตัวบุคคลแบบจัดกลุ่มด่วนรวดเร็ว"
+      },
+      {
+        id: 46,
+        category: 3,
+        text: "ตัวหนังสือสัญลักษณ์ที่ระบุข้อมูลไว้บนตีนแผ่นกระดาษส่วนล่างสุดซ้ำๆ ปรากฏทุกหน้าในเอกสาร เรียกว่าอะไร?",
+        choices: [
+          "ส่วนหัวกระดาษ (Header)",
+          "ส่วนท้ายกระดาษ (Footer)",
+          "เชิงอรรถอธิบาย (Footnote)",
+          "สารบัญท้ายเล่ม"
+        ],
+        answer: 1,
+        trick: "Header = หัว (อยู่บนสุด), Footer = เท้า/ตีน (อยู่ล่างสุดของทุกแผ่นเอกสาร)",
+        explanation: "ส่วนท้ายกระดาษ (Footer) ใช้สำหรับพิมพ์กรอกรายละเอียดจำพวก เลขหน้า วันที่ หรือชื่อผู้เขียน เพื่อให้ระบบฉายแสดงผลล่างสุดเหมือนกันโดยไม่ต้องไล่พิมพ์ทีละหน้า"
+      },
+      {
+        id: 47,
+        category: 3,
+        text: "ฟีเจอร์คำสั่ง 'เชิงอรรถ' (Footnote) ใน Microsoft Word มีคุณประโยชน์และสัจพจน์ในการใช้งานด้านใด?",
+        choices: [
+          "ใช้สำหรับอ้างอิงที่มาข้อมูล แหล่งอ้างอิง หรือเสริมอธิบายขยายความเพิ่มเติมที่ด้านล่างสุดของหน้าที่มีคำนั้น",
+          "ใช้แก้ไขปัญหาสายเน็ตตกหล่น",
+          "ปรับเปลี่ยนสีธีมของเอกสารอัตโนมัติ",
+          "ช่วยลดแรงพ่นพิมพ์ของหัวพิมพ์"
+        ],
+        answer: 0,
+        trick: "Footnote = ดักโน้ตไว้ล่างสุดของแผ่นกระดาษนั้นๆ มักใช้บอกแหล่งอ้างอิงตำราและอธิบายศัพท์วิชาการยากๆ",
+        explanation: "เชิงอรรถ (Footnote) เป็นจารึกข้อมูลอ้างอิงที่ผูกกับตัวเลขสัญลักษณ์ดัชนีลอยในย่อหน้า ช่วยชี้แนะชี้ที่มาโดยไม่รบกวนจังหวะการอ่านเนื้อเรื่องหลัก"
+      },
+      {
+        id: 48,
+        category: 3,
+        text: "เมื่อต้องการสั่งข้อความให้เริ่มต้นกระโดดไปพิมพ์เริ่มต้นหน้ากระดาษใหม่ถัดไปทันทีโดยระบบไม่เละควรเลือกใช้คำสั่งใด?",
+        choices: [
+          "ตัวคั่นหน้า (Page Break)",
+          "ตัวคั่นส่วนตัดโครงสร้าง (Section Break)",
+          "จัดพิกัดย่อหน้ารวม",
+          "ลบหน้าพิมพ์ทั้งหมด"
+        ],
+        answer: 0,
+        trick: "Page Break = ตัวตัดหน้ากระดาษ ข้อความท่อนล่างจะวาร์ปไปเริ่มต้นแผ่นถัดไปทันทีโดยขอบหน้าต่างกระดาษเดิมไม่ขยับเคลื่อนเละเทะ",
+        explanation: "การใช้ Page Break ดีกว่าการกด Enter ค้างยาวๆ หลายรอบ เพราะหากเราขยับเติมประโยคด้านบน เนื้อหาในหน้ากระดาษด้านล่างที่ใส่ Page Break ไว้จะยังนิ่งอยู่ที่ระเบียบเดิมไม่เคลื่อนโย้เย้"
+      },
+      {
+        id: 49,
+        category: 3,
+        text: "การกำหนดสไตล์ (Styles) ให้กับหัวข้อเอกสาร เช่น การระบุสไตล์ Heading 1, Heading 2 มีวัตถุประสงค์ที่ดีที่สุดในเรื่องใด?",
+        choices: [
+          "ช่วยประหยัดพื้นที่เก็บข้อมูลของเอกสารลงครึ่งหนึ่ง",
+          "ช่วยอำนวยความสะดวกในการจัดรันทำ สารบัญอัตโนมัติ (Table of Contents)",
+          "ช่วยตรวจสอบคำต่างประเทศในระบบคอร์ปัส",
+          "ช่วยเพิ่มขนาดแรมที่โปรแกรมตรวจดึง"
+        ],
+        answer: 1,
+        trick: "Heading = ร่างโครงเอกสารสำหรับเป็นร่องรอยให้โปรแกรมดูดเนื้อหาไปสรุปทำ หน้าสารบัญให้ทันใจในสองคลิก",
+        explanation: "เมื่อผู้เขียนระบุหัวข้อเป็นสไตล์ Heading ไว้ครบถ้วน โปรแกรม Word จะจดจำตำแหน่งเลขหน้าของหัวข้อทั้งหมดนั้นเพื่อประมวลผลดึงออกมาทำรายงานสารบัญสารบัญอัตโนมัติให้สวยงาม"
+      },
+      {
+        id: 50,
+        category: 3,
+        text: "In แผ่นงานคำนวณสถิติ Excel ช่องสี่เหลี่ยมที่เป็นพิกัดพาดผ่านจัดเป็นจุดตัดระหว่างแถว (Row) และคอลัมน์ (Column) คืออะไร?",
+        choices: [
+          "เซลล์ (Cell)",
+          "ชีตกระดาษ (Sheet)",
+          "บล็อกข้อมูล (Block)",
+          "เรนจ์จำกัดพื้นที่ (Range)"
+        ],
+        answer: 0,
+        trick: "Cell = ห้องสี่เหลี่ยมเดี่ยวขนาดย่อม พิกัดเก็บสูตรคำนวณและข้อมูล (เช่น ช่องสี่เหลี่ยม A1)",
+        explanation: "จุดเชื่อมโยงระหว่างตัวอักษรบอกหลักคอลัมน์และตัวเลขแสดงแถวคือ Cell เช่น พิกัดแถวที่ 5 คอลัมน์ C จะเรียกว่า เซลล์ C5"
+      },
+      {
+        id: 51,
+        category: 3,
+        text: "สิ่งแรกสุดที่จะพิมพ์ป้อนในเซลล์ของโปรแกรม Microsoft Excel เพื่อเริ่มรันประมวลผลสูตรคำนวณคืออะไร?",
+        choices: [
+          "สัญลักษณ์เครื่องหมายบวก (+)",
+          "สัญลักษณ์เครื่องหมายเท่ากับ (=)",
+          "สัญลักษณ์เครื่องหมายดอกจัน (*)",
+          "สัญลักษณ์เครื่องหมายคำพูด (\")"
+        ],
+        answer: 1,
+        trick: "= (เครื่องหมายเท่ากับ) คือ กุญแจเปิดรหัสสูตรคำนวณ ถ้าลืมใส่เอ็กเซลจะมองเห็นเป็นเพียงแค่ตัวหนังสือเขียนธรรมดา",
+        explanation: "การขึ้นต้นสูตรใน Excel ต้องกรอกเครื่องหมายเท่ากับ (=) นำหน้าเป็นนิพจน์แรกสุด เพื่อเปิดแผงวงจรรวบยอดตรรกะคณิตศาสตร์สำหรับคำนวณผลลัพธ์ in ช่องเซลล์"
+      },
+      {
+        id: 52,
+        category: 3,
+        text: "ฟังก์ชันหลักสากลในข้อใดที่เลือกใช้อำนวยการรันคำนวณเพื่อหาผลรวมเลขในแถวข้อมูล?",
+        choices: [
+          "AVERAGE",
+          "COUNT",
+          "SUM",
+          "MAX"
+        ],
+        answer: 2,
+        trick: "SUM = ซัมเมชัน (การหาผลบวกรวมทั้งหมด) อยากหาเงินสรุปรวมทั้งหมดใช้สูตร SUM",
+        explanation: "ฟังก์ชัน SUM ทำหน้าที่คัดเลือกกลุ่มพิกเซลตัวเลขทุกช่องมารวมยอดบวกคณิตศาสตร์รวมกัน เช่น การจัดรันสูตรเพื่อสรุปยอดรายจ่ายของแผนก"
+      },
+      {
+        id: 53,
+        category: 3,
+        text: "หากเจตนาต้องการหาค่ากลางสถิติค่านำเสนอเฉลี่ย (Mean) ของคะแนนผลสอบนักเรียนควรใช้ฟังก์ชันใด?",
+        choices: [
+          "AVERAGE",
+          "MIN",
+          "SUM",
+          "COUNT"
+        ],
+        answer: 0,
+        trick: "Average = ค่าเฉลี่ยเลขคณิต มีกลไกบวกเลขรวมตัวแปรทั้งหมดให้เสร็จแล้วจับหารสัดส่วนจำนวนข้อมูลอัตโนมัติ",
+        explanation: "AVERAGE เป็นฟังก์ชันเบื้องต้นยอดนิยมของพนักงานบัญชีและคุณครู สำหรับสืบหาเฉลี่ยผลรวมของข้อมูลตามช่วงพิกัดที่ลากครอบ"
+      },
+      {
+        id: 54,
+        category: 3,
+        text: "สัญลักษณ์ที่แทนการคำนวณเชิงการ 'คูณ' และการ 'หาร' ในโปรแกรม Microsoft Excel คือข้อใดตามมาตรฐาน?",
+        choices: [
+          "คูณใช้สัญลักษณ์ x และหารใช้สัญลักษณ์ %",
+          "คูณใช้สัญลักษณ์ * (ดอกจัน) และหารใช้สัญลักษณ์ / (สแลช)",
+          "คูณใช้สัญลักษณ์ ^ และหารใช้สัญลักษณ์ -",
+          "คูณใช้สัญลักษณ์ + และหารใช้สัญลักษณ์ ="
+        ],
+        answer: 1,
+        trick: "คูณ = ดอกจัน (*) และ หาร = สแลช (/) ห้ามกรอกอักษร x หรือ สัญลักษณ์เครื่องหมายหารเดิม เพราะโปรแกรมไม่เข้าใจ",
+        explanation: "ตามระบบโครงสร้างทางคณิตศาสตร์สากลของโปรแกรมคำนวณ เครื่องหมายดอกจัน (*) แทนการดำเนินการคูณ และสแลช (/) แทนการดำเนินการหารตัวแปร"
+      },
+      {
+        id: 55,
+        category: 3,
+        text: "ฟังก์ชัน COUNT ในกระบวนการทำงานแผ่นตาราง Excel มีบทบาทและวัตถุประสงค์หลักข้อใด?",
+        choices: [
+          "ค้นหาสถิติตัวแปรคำค่าน้อยที่สุด",
+          "นับจำนวนช่องเซลล์ข้อมูลที่มีตัวเลขกรอกอยู่",
+          "ลบพิกัดข้อมูลซ้ำ",
+          "แชร์งานผ่านระบบคลาวด์"
+        ],
+        answer: 1,
+        trick: "Count = การนับจำนวนชิ้น นับดูว่ามีเซลล์ที่มีจำนวนเลขอยู่กี่ช่องโดยไม่ต้องบวกค่าของเลขข้างใน",
+        explanation: "ฟังก์ชัน COUNT คอยจับตาดูและรายงานสัดส่วนว่ามีจำนวนเซลล์ข้อมูลที่มีค่านิพจน์เป็นจำนวนเลขกรอกไว้อยู่กี่ช่อง เพื่อประเมินประชากรข้อมูล"
+      },
+      {
+        id: 56,
+        category: 3,
+        text: "เมื่อต้องการล็อกพิกัดเซลล์ต้นขั้วไม่ให้เลื่อนขยับตำแหน่งคลาดเลื่อนเวลาคลิกลากคัดลอกสูตรใช้สัญลักษณ์ใดคั่น?",
+        choices: [
+          "สัญลักษณ์เครื่องหมาย $ (ดอลลาร์)",
+          "สัญลักษณ์เครื่องหมาย #",
+          "สัญลักษณ์เครื่องหมาย @",
+          "สัญลักษณ์เครื่องหมาย &"
+        ],
+        answer: 0,
+        trick: "ใส่สัญลักษณ์ $ (ดอลลาร์) ล็อกไว้หน้าคอลัมน์และหน้าแถว เช่น $A$1 ลากทิศทางใดก็ล็อกแน่นไม่เลื่อน",
+        explanation: "เครื่องหมาย $ (Dollar Sign) ใช้กำหนดการอ้างอิงตำแหน่งเซลล์แบบคงที่ (Absolute Cell Reference) ล็อกตำแหน่งแถวหรือหลักไม่ให้ขยับเลื่อนตามทิศทางคัดลอก"
+      },
+      {
+        id: 57,
+        category: 3,
+        text: "ปุ่มลัดคีย์ฟังก์ชัน (Function Key) แถวบนสุดแป้นพิมพ์เครื่องคอมพิวเตอร์ใดที่ช่วยล็อกพิกัดเซลล์ ($) อัตโนมัติขณะเขียนสูตรด่วน?",
+        choices: [
+          "ปุ่ม F2",
+          "ปุ่ม F4",
+          "ปุ่ม F5",
+          "ปุ่ม F9"
+        ],
+        answer: 1,
+        trick: "ปุ่มล็อกเซลล์ด่วนกด F4 ทันทีหลังจากพิมพ์ระบุพิกัดช่องเสร็จ เครื่องหมาย $ จะกระโดดมาคลุมล็อกให้อัตโนมัติ",
+        explanation: "เมื่อคลิกเลือกเซลล์ในสูตรคำนวณ การกดปุ่ม F4 ซ้ำๆ จะสลับโหมดล็อกล็อกทั้งแถวและหลัก ล็อกเฉพาะแถว ล็อกเฉพาะหลัก หรือยกเลิกการล็อก ช่วยลดเวลาพิมพ์สัญลักษณ์ด้วยตนเอง"
+      },
+      {
+        id: 58,
+        category: 3,
+        text: "ฟังก์ชัน VLOOKUP มีโครงสร้างความสามารถการสืบค้นรายงานวิเคราะห์ข้อมูลโดดเด่นในกรณีใด?",
+        choices: [
+          "ค้นหาและดึงข้อมูลจากตารางแนวตั้งมาแสดง",
+          "นับเฉพาะช่องว่าง",
+          "จัดพารากราฟย่อหน้าอักษรกระจาย",
+          "ขจัดไวรัสคัดกรองระบบ"
+        ],
+        answer: 0,
+        trick: "V = Vertical (แนวตั้ง) + LOOKUP (ส่องค้นหา) แปลตรงตัวส่องมองข้อมูลจากพิกัดแนวตั้งดึงออกมาแสดง",
+        explanation: "VLOOKUP เป็นหนึ่งในฟังก์ชันสืบค้นยอดนิยม ค้นหาคีย์พอยต์ที่ระบุในคอลัมน์แรกสุดของช่วงตารางอ้างอิง แล้วส่งกลับค่านำเสนอข้อมูลในแถวเดียวกันตามระบุ"
+      },
+      {
+        id: 59,
+        category: 3,
+        text: "หน้าจอแผ่นงานสี่เหลี่ยมแบนแต่ละหน้างานในแอปพลิเคชันนำเสนองาน Microsoft PowerPoint เรียกว่าอะไร?",
+        choices: [
+          "หน้ากระดาษ (Page)",
+          "แผ่นตารางงาน (Sheet)",
+          "แผ่นสไลด์นำเสนอ (Slide)",
+          "โครงร่างเฟรม (Frame)"
+        ],
+        answer: 2,
+        trick: "Slide = แผ่นฉายภาพสไลด์ แต่ละแผ่นเฟรมเปรียบเหมือนสไลด์รูปภาพแผ่นนำเสนอเรียงราย",
+        explanation: "แผ่นงานสี่เหลี่ยมเดี่ยว in PowerPoint เรียกพ้องทับศัพท์เป็นสากลว่า สไลด์ (Slide) มีสัดส่วนยอดนิยม 16:9 ในการจัดพิมพ์ภาพฉาย"
+      },
+      {
+        id: 60,
+        category: 3,
+        text: "เมื่อทำโครงร่างสไลด์เสร็จแล้ว และต้องการเพิ่มสไลด์เปล่าหน้าใหม่ (New Slide) ทันทีในไฟล์เดิมกดใช้ปุ่มคีย์ลัดใด?",
+        choices: [
+          "ปุ่ม Ctrl + N",
+          "ปุ่ม Ctrl + M",
+          "ปุ่ม Ctrl + S",
+          "ปุ่ม Ctrl + W"
+        ],
+        answer: 1,
+        trick: "Ctrl + M = เพิ่ม More Slide ในโครงการเดิม ส่วนปุ่ม Ctrl + N คือเปิดหน้าต่างไฟล์งานชิ้นใหม่แกะกล่องคนละอัน",
+        explanation: "การเปิดสไลด์หน้าใหม่แทรกต่อหลังสไลด์ปัจจุบันใน PowerPoint ใช้คีย์ลัดคือ Ctrl + M เพื่อเป็นคีย์หลักเลี่ยงการสับสนกับคีย์ลัดเปิดโปรเจกต์ใหม่ (Ctrl + N)"
+      },
+
+      // CATEGORY 4: Modern Technologies and Cybersecurity (หมวดที่ 4)
+      {
+        id: 61,
+        category: 4,
+        text: "ข่าวสารปลอมบิดเบือนประเด็นที่สร้างและส่งต่อกระแสบนโลกไซเบอร์มุ่งเน้นหลอกลวงให้ผู้อ่านเข้าใจผิดเรียกว่าอะไร?",
+        choices: [
+          "Real News",
+          "Spam News",
+          "Fake News",
+          "Click News"
+        ],
+        answer: 2,
+        trick: "Fake = แปลว่าของเท็จ/ไม่จริง ข้อมูลข่าวลวงที่กุขึ้นหลอกปั่นกระแสป่วนสังคมออนไลน์",
+        explanation: "ข่าวปลอม (Fake News) คือชุดข้อมูลข่าวสารที่เป็นเท็จทั้งหมดหรือบางส่วน บิดเบือนความเป็นจริงโดยเจตนาประสงค์ร้ายเพื่อหวังผลดึงยอดเข้าชม ปั่นกระแสโฆษณา หรือทำลายชื่อเสียงบุคคล"
+      },
+      {
+        id: 62,
+        category: 4,
+        text: "พฤติกรรมการโพสต์พยานหลักฐานรูปภาพที่ติดภาพถ่ายบุคคลอื่น หรือเอกสารประจำตัวผู้อื่นลงในโซเชียลสาธารณะโดยไม่ได้รับอนุญาต เสี่ยงผิดกฎหมายใด?",
+        choices: [
+          "พรบ.ลิขสิทธิ์",
+          "พรบ.คุ้มครองข้อมูลส่วนบุคคล (PDPA)",
+          "กฎหมายสากลว่าด้วยพิกัดคอมพิวเตอร์",
+          "ไม่ถือเป็นความผิดล่วงละเมิด"
+        ],
+        answer: 1,
+        trick: "PDPA = คุ้มครองสิทธิข้อมูลส่วนตัวประชาชน ภาพถ่าย สัดส่วนใบหน้า เบอร์โทรและประวัติบุคคล",
+        explanation: "กฎหมาย PDPA (Personal Data Protection Act) มุ่งกำกับดูแลปกป้องความปลอดภัยข้อมูลความเป็นส่วนตัวประชาชน การเปิดเผยหรือใช้ข้อมูลส่วนบุคคลโดยที่เจ้าตัวไม่ยอมรับรู้และไม่อนุมัติเป็นเรื่องละเมิดกฎหมาย"
+      },
+      {
+        id: 63,
+        category: 4,
+        text: "การส่งต่อประจาน โพสต์แกล้งโจมตี เสียดสี หรือสร้างข่มเหงน้ำใจผู้อื่นผ่านสังคมโซเชียลเครือข่ายเรียกว่าพฤติกรรมอะไร?",
+        choices: [
+          "Cyber Bullying (ระรานทางไซเบอร์)",
+          "Cyber Phishing",
+          "Cyber Attack",
+          "Cyber Security"
+        ],
+        answer: 0,
+        trick: "Bullying = พฤติกรรมอันธพาลระรานพิมพ์ด่ากลั่นแกล้งโจมตีกันในโลกโซเชียลมีเดีย",
+        explanation: "การระรานทางไซเบอร์ (Cyber Bullying) เป็นการทำร้ายจิตใจหรือเหยียดหยาม คุกคามบุคคลเป้าหมายด้วยข้อความ รูปภาพ หรือการแท็กรุมทำลายภาพลักษณ์อย่างต่อเนื่องผ่านเทคโนโลยีออนไลน์"
+      },
+      {
+        id: 64,
+        category: 4,
+        text: "กระบวนการส่งข้อความหรือ SMS พร้อมแนบลิงก์ลวงตาเลียนแบบพิกัดของจริงเพื่อตกเหยื่อหลอกล่อให้กรอกรหัสสำคัญขโมยสิทธิ์เรียกว่าอะไร?",
+        choices: [
+          "Phishing (ฟิชชิ่ง)",
+          "Hacking เจาะรหัสสายตรง",
+          "Farming ทำการเกษตรดิจิทัล",
+          "Scanning"
+        ],
+        answer: 0,
+        trick: "Phishing พ้องเสียง Fishing (ตกปลา) โยนเหยื่อล่อเลียนแบบหน้าเว็บจริงเพื่อหลอกให้ผู้ใช้ฮุบเหยื่อกรอกรหัสผ่าน",
+        explanation: "การหลอกลวงแบบฟิชชิ่ง (Phishing) อาศัยหน้าต่างข้อความตกแต่งเหมือนสัจธรรมหน่วยงานจริง เช่น ธนาคาร หลอกให้ผู้ใช้ป้อนพาสเวิร์ด หมายเลขบัตร เพื่อนำไปใช้โจรกรรมเงิน"
+      },
+      {
+        id: 65,
+        category: 4,
+        text: "มัลแวร์กลุ่มสายพันธุ์ใดมุ่งแอบเข้ามาล็อกไฟล์เอกสารคอมพิวเตอร์จนเปิดไม่ได้แล้วขึ้นข้อความข่มขู่ขู่รีดเงินเพื่อแลกกุญแจรหัสคืน?",
+        choices: [
+          "ไวรัสคอมพิวเตอร์ทั่วไป",
+          "หนอนชอนไส้คอมพิวเตอร์ (Worm)",
+          "โทรจันแฝงตัว",
+          "แรนซัมแวร์ (Ransomware - มัลแวร์เรียกค่าไถ่)",
+        ],
+        answer: 3,
+        trick: "Ransom = เรียกค่าไถ่ จับล็อกข้อมูลและไฟล์สำคัญทั้งหมดไว้เพื่อข่มขู่กรรโชกเรียกทรัพย์",
+        explanation: "แรนซัมแวร์ (Ransomware) เป็นภัยไซเบอร์รุนแรงที่แฝงมากับการดาวน์โหลด มุ่งเน้นเข้ารหัสลับไฟล์ข้อมูลในฮาร์ดดิสก์ทั้งหมดจนใช้งานไม่ได้ แล้วส่งป๊อปอัปแจ้งขั้นตอนจ่ายเงินสกุลบิตคอยน์เพื่อไถ่ข้อมูลคืน"
+      },
+      {
+        id: 66,
+        category: 4,
+        text: "กลไกการยืนยันตัวตนแบบ MFA (Multi-Factor Authentication) มีลักษณะที่สนับสนุนความมั่นคงปลอดภัยอย่างไร?",
+        choices: [
+          "เข้ารหัสเฉพาะหน้ากางโปรเจกต์งาน",
+          "บังคับยืนยันตัวตนตั้งแต่สองสัจพจน์ขึ้นไปร่วมกัน เช่น พาสเวิร์ดคู่กับเลข OTP บนสมาร์ตโฟน",
+          "สแกนลายนิ้วมือเพียงอย่างเดียวตลอดสาย",
+          "อนุญาตเฉพาะเครื่องเชื่อมเครือข่ายของรัฐ"
+        ],
+        answer: 1,
+        trick: "Multi = หลากหลายปัจจัย นอกเหนือจากจำรหัสผ่านได้แล้ว ยังต้องใช้รหัส OTP ชั่วคราวจากมือถือ",
+        explanation: "MFA ช่วยลดอัตราเสี่ยงสูงสุดในการถูกแฮกข้อมูล เพราะต่อให้แฮกเกอร์ล่วงรู้ชื่อผ่านบัญชีผู้ใช้ด่านแรก ก็ยังไม่สามารถยึดสิทธิ์บัญชีได้เนื่องจากติดขั้นตอนการกรอกพาสโค้ด OTP ที่ส่งเข้ามือถือเจ้าตัว"
+      },
+      {
+        id: 67,
+        category: 4,
+        text: "เป้าหมายหลักและหน้าที่ของพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA) คือข้อใด?",
+        choices: [
+          "มุ่งรักษาความเร็วระดับสัญญาณการเดินทางคลื่นเน็ต",
+          "คุ้มครองสิทธิ์สวัสดิภาพเกี่ยวกับข้อมูลส่วนตัวประชาชนจากการจัดเก็บใช้งานไม่พึงประสงค์",
+          "ป้องกันสปายขโมยพอร์ทไฟฟ้าของรัฐ",
+          "มุ่งยกเลิกระดับชั้น OSI Model"
+        ],
+        answer: 1,
+        trick: "PDPA = ปกป้องสิทธิ์ข้อมูลส่วนตัวประชาชน กำหนดมาตรการให้องค์กรต่างๆ ต้องขออนุมัติก่อนแชร์ข้อมูลส่วนบุคคล",
+        explanation: "พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) บัญญัติขึ้นเพื่อให้การรวบรวม การประมวลผลข้อมูล และการใช้งานข้อมูลส่วนบุคคลที่ระบุตัวตนจริงของประชาชน มีระบบจัดสิทธิ์ที่ชัดเจนและคุ้มครองความปลอดภัยสูงสุด"
+      },
+      {
+        id: 68,
+        category: 4,
+        text: "มัลแวร์ประเภทใดที่มีความสามารถสูงในการสำเนารูปพรรณแพร่พันธุ์ตัวเองคืบคลานข้ามเครือข่ายสายแลนอินเทอร์เน็ตได้เองอัตโนมัติ?",
+        choices: [
+          "หนอนคอมพิวเตอร์ (Worm)",
+          "ไวรัสคอมพิวเตอร์ทั่วไป (Virus)",
+          "ม้าโทรจันแฝงตัว (Trojan Horse)",
+          "สปายแวร์สอดแนม (Spyware)"
+        ],
+        answer: 0,
+        trick: "Worm = หนอนชอนไส้ไปตามสายแลน เจาะช่องโหว่รันข้ามเครื่องได้เองโดยไม่ต้องมีคนกดคลิกเปิดไฟล์รันเครื่อง",
+        explanation: "หนอนคอมพิวเตอร์ (Worm) เป็นชุดโค้ดประสงค์ร้ายที่ไม่ต้องแนบติดกับโปรแกรมอื่น สามารถสร้างสำเนาตัวเองส่งสัญญาณเจาะหาไอพีเหยื่อวงอื่นผ่านระบบเครือข่ายส่งผลให้แบนด์วิดท์เครือข่ายหน่วงและพังทลาย"
+      },
+      {
+        id: 70,
+        category: 4,
+        text: "บริการเก็บแฟ้มข้อมูลออนไลน์ผ่านอินเทอร์เน็ตยอดนิยมจำพวก Google Drive หรือ OneDrive พัฒนาขึ้นบนรากฐานเทคโนโลยีข้อใด?",
+        choices: [
+          "เทคโนโลยีคลาวด์คอมพิวติ้ง (Cloud Computing)",
+          "เทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (IoT)",
+          "ระบบจำลองสามมิติกึ่งเสมือนจริง (VR)",
+          "ระบบอินทราเน็ตควบคุมสิทธิ์ทางสายส่ง"
+        ],
+        answer: 0,
+        trick: "Cloud = ก้อนเมฆเก็บฝากข้อมูล นำไฟล์ไปลอยฝากไว้บนอินเทอร์เน็ต เรียกใช้ออกมาเปิดทำงานได้จากทุกที่ทุกเวลา",
+        explanation: "คลาวด์คอมพิวติ้ง (Cloud Computing) ให้บริการพื้นที่จัดเก็บบันทึกข้อมูลและประมวลผลโปรแกรมสำเร็จรูปผ่านเครือข่ายออนไลน์อินเทอร์เน็ต ช่วยลดภาระองค์กรในการบำรุงรักษาฮาร์ดแวร์เอง"
+      },
+      {
+        id: 71,
+        category: 4,
+        text: "นิยามที่ถูกต้องครอบคลุมที่สุดของเทคโนโลยีอินเทอร์เน็ตของสรรพสิ่ง (Internet of Things หรือ IoT) คืออะไร?",
+        choices: [
+          "การรวมกลุ่ม CPU หลายตัวช่วยคำนวณ",
+          "การที่อุปกรณ์เครื่องใช้ไฟฟ้าหรือข้าวของเครื่องใช้ในบ้าน เชื่อมต่อสัญญาณเน็ตแลกเปลี่ยนข้อมูลและรับคำสั่งสั่งงานระยะไกลได้",
+          "กระบวนการตัดต่อแชร์แวร์",
+          "กล่องพ่นตัวเก็บประจุแรงดันไฟฟ้า"
+        ],
+        answer: 1,
+        trick: "IoT = ของทุกสิ่ง (Things) ติดอินเทอร์เน็ต มีชิปประมวลผลเซ็นเซอร์ เช่น ตู้เย็นสั่งไข่ได้ หรือแอร์เปิดล่วงหน้าผ่านมือถือ",
+        explanation: "Internet of Things (IoT) คือ การยัดชิปคอมพิวเตอร์และเซ็นเซอร์รับส่งสัญญาณลงในเครื่องใช้กายภาพ ทำให้อุปกรณ์สามารถสื่อสารแลกเปลี่ยนข้อมูลประสานพฤติกรรมได้อย่างชาญฉลาดโดยไม่ต้องใช้คนสั่งทีละข้อ"
+      },
+      {
+        id: 72,
+        category: 4,
+        text: "สติปัญญาคอมพิวเตอร์ที่เป็นระบบสมองกลอัจฉริยะ สามารถประมวลผลเรียนรู้วิเคราะห์ตรรกะได้คล้ายมนุษย์คืออะไร?",
+        choices: [
+          "ระบบปัญญาประดิษฐ์ (Artificial Intelligence หรือ AI)",
+          "ระบบจัดตารางไฟล์ Excel",
+          "ระบบคลาวด์ชนิดออฟไลน์",
+          "กลไกการปูสายสัญญาณข้ามทวีป"
+        ],
+        answer: 0,
+        trick: "AI = ปัญญาประดิษฐ์ ระบบโปรแกรมที่มนุษย์สร้างเลียนแบบความฉลาด ความคิดและเหตุผลเหมือนคน",
+        explanation: "ปัญญาประดิษฐ์ (AI) เป็นกลุ่มสถาปัตยกรรมอัลกอริทึมคำนวณที่ป้อนคลังข้อมูลจำนวนมหาศาลสอนเครื่องคอมพิวเตอร์ให้มีความสามารถด้านการวิเคราะห์ภาพ แปลภาษา และพยากรณ์ได้อย่างชาญฉลาด"
+      },
+      {
+        id: 73,
+        category: 4,
+        text: "สติปัญญาประดิษฐ์ระดับก้าวหน้าในปัจจุบันที่โดดเด่นด้านความสามารถการรังสรรค์จัดสร้างข้อมูลใหม่ขึ้นมา เช่น เขียนแต่งภาพ แต่งเรียงความ หรือร่างโค้ดโปรแกรม เรียกว่ากลุ่มใด?",
+        choices: [
+          "Analytical AI",
+          "Generative AI (เจเนอเรทีฟ เอไอ)",
+          "Robotic AI",
+          "Static AI"
+        ],
+        answer: 1,
+        trick: "Generate = ผลิต/สร้าง เจนสร้างสรรค์ผลงานใหม่ๆ ขึ้นมา เช่น ChatGPT, Gemini หรือ Midjourney",
+        explanation: "เจเนอเรทีฟเอไอ (Generative AI) เป็นความฉลาดระดับโมเดลภาษาและการสร้างภาพ คอยวิเคราะห์เจตนารมณ์ผู้ใช้จากคำสั่งข้อความ (Prompt) แล้วสังเคราะห์ประมวลสร้างงานชิ้นใหม่ให้อย่างสมบูรณ์"
+      },
+      {
+        id: 74,
+        category: 4,
+        text: "สถาปัตยกรรมการบันทึกข้อมูลแบบกระจายศูนย์ ไร้จุดควบคุมกลาง บล็อกข้อมูลล็อกต่อเชื่อมโยงรหัสแน่นหนาเป็นสายโซ่ดัดแปลงแก้ยากคือข้อใด?",
+        choices: [
+          "Big Data คลังข้อมูลมโหฬาร",
+          "ระบบ IoT ทั่วตึก",
+          "บล็อกเชน (Blockchain)",
+          "ปัญญารับมือไวรัสลอยลม"
+        ],
+        answer: 2,
+        trick: "Blockchain = กล่องกลไกกระจายสำเนา ทุกเครื่องช่วยกันถือคีย์บอร์ดความจริง ปลอดภัยสูงมาก แฮกแก้ย้อนหลังจุดเดียวไม่ได้",
+        explanation: "บล็อกเชน (Blockchain) มีโครงสร้างจัดเก็บธุรกรรมเป็นห่วงบล็อกต่อเนื่องกันโดยใช้เทคโนโลยีวิทยาการเข้ารหัส ทุกเครื่องในระบบแชร์ข้อมูลตรวจสอบพร้อมเพรียงกัน จึงนิยมนำมาใช้เป็นเบื้องหลังระบบเงินดิจิทัล"
+      },
+      {
+        id: 75,
+        category: 4,
+        text: "ความกังวลและอุปสรรคทางเทคโนโลยีข้อใดของบอต AI ที่มักจะกรอกแต่งประโยคตอบคำถามข้อมูลเท็จขึ้นมาเองอย่างน่าเชื่อถือ?",
+        choices: [
+          "อาการหลอนแต่งคำมั่วซั่วของเอไอ (Hallucination)",
+          "การพ่นชุดคำสั่งล้างเครื่องผู้ใช้งาน",
+          "ปัญหาสายขั้วไฟลัดวงจรหน้าสัมผัส",
+          "การปิดระบบกะทันหันยามวิกาล"
+        ],
+        answer: 0,
+        trick: "Hallucination = เอไอหลอน/มโนข้อมูล ตอบคำมั่วๆ แต่งเรื่องขึ้นมาเองอย่างมั่นใจและมีแบบแผน สัจธรรมเราจึงต้องเช็กความจริงซ้ำเสมอ",
+        explanation: "Hallucination เป็นข้อจำกัดที่พบในโมเดลภาษาขนาดใหญ่ (LLM) เนื่องจากบางครั้งตัวแอปพลิเคชันพยายามคาดเดาความน่าจะเป็น of รอยต่อคำถัดไปจนเรียบเรียงเนื้อหาเป็นตุเป็นตะแต่มิใช่ความจริงเชิงสถิติ"
+      },
+      {
+        id: 76,
+        category: 4,
+        text: "เทคโนโลยีสัญญาณเคลื่อนที่ไร้สายความเร็วสูญญากาศปัจจุบันที่มีค่าหน่วงต่ำ (Low Latency) จนประสานอุปกรณ์ IoT รวดเร็วเกือบเรียลไทม์คืออะไร?",
+        choices: [
+          "เทคโนโลยีคลื่น 2G ยุคอดีต",
+          "เทคโนโลยีคลื่น 3G",
+          "เทคโนโลยีคลื่น 4G",
+          "เทคโนโลยีคลื่น 5G/6G"
+        ],
+        answer: 3,
+        trick: "5G/6G = ทางวิ่งข้อมูลความเร็วระดับกิกะบิต หน่วงสัญญาณต่ำมาก แทบไม่มีดีเลย์ ช่วยเรื่องการบังคับหุ่นยนต์ผ่าตัดและรถไร้คนขับเสถียรที่สุด",
+        explanation: "เครือข่าย 5G และอนาคต 6G มีแบนด์วิดท์มหาศาลเพื่อส่งผ่านข้อมูลรอบทิศทาง ค่าหน่วงเวลา (Latency) ที่สั้นต่ำในระดับมิลลิวินาทีเป็นสัจพจน์ช่วยให้อุตสาหกรรมหุ่นยนต์และ AI คุยตอบโต้กันได้ไร้ดีเลย์"
+      },
+      {
+        id: 77,
+        category: 4,
+        text: "กระบวนการสำรองข้อมูล (Backup) ข้อใดที่มีประสิทธิภาพสูงสุดในการสกัดกั้นรับมือวิกฤตไวรัสเรียกค่าไถ่ (Ransomware)?",
+        choices: [
+          "คัดลอกไฟล์ซ้ำไว้ในไดรฟ์ C โฟลเดอร์เดิม",
+          "สำรองข้อมูลแยกไว้ในอุปกรณ์จัดเก็บภายนอกออฟไลน์ที่ไม่ได้เสียบคาเชื่อมต่อเน็ตไว้ตลอดเวลา (Cold Backup)",
+          "เปลี่ยนประเภทสกุลไฟล์ภาพทุกแผ่น",
+          "แชร์ไฟล์เปิดสิทธิ์เขียนแบบสาธารณะ"
+        ],
+        answer: 1,
+        trick: "Cold Backup = สำรองไฟล์นอกเครื่องสำรองปิดการเชื่อมต่อเน็ต เพราะหากมัลแวร์โจมตีระบบมันจะวิ่งไล่ล็อกไดรฟ์ทุกชิ้นที่เชื่อมต่อพ่วงค้างอยู่",
+        explanation: "เนื่องจาก Ransomware มีวิธานเจาะล็อกฐานข้อมูลทุกอุปกรณ์ที่กำลังแชร์สัญญาณ การทำสำรองข้อมูลแบบถอดปลั๊กตัดขาดทางเครือข่าย ช่วยเป็นกำแพงสัจพจน์ให้ข้อมูลชุดสำรองไม่ถูกแอบแฮกไปด้วย"
+      },
+      {
+        id: 78,
+        category: 4,
+        text: "ค่านิยามแนวคิดด้านระบบความมั่นคงปลอดภัยไซเบอร์สมัยใหม่ที่สถาปนาหลักการ 'ห้ามไว้ใจเครื่องอุปกรณ์ใดๆ และต้องตรวจสอบสิทธิ์สม่ำเสมอ' คืออะไร?",
+        choices: [
+          "หลักการความน่าเชื่อถือเต็มพิกัด",
+          "หลักการ Zero Trust (ความไว้วางใจเป็นศูนย์)",
+          "หลักการแจกจ่ายรหัสเปิดประตูสาธารณะ",
+          "ระบบการแชร์พอยต์พาริตี"
+        ],
+        answer: 1,
+        trick: "Zero Trust = ศูนย์ความเชื่อใจ ทุกๆ จังหวะขยับเชื่อมต่อเข้าใช้งาน ต้องยื่นหลักฐานเช็กสิทธิ์สแกนยืนยันบัตรใหม่เสมอห้ามละเว้น",
+        explanation: "Zero Trust เป็นกรอบความคิดความมั่นคงข้อมูลยุคใหม่ที่พึงสังวรว่าภัยคุกคามอาจแฝงอยู่ในตึกเครือข่ายเดียวกัน ทุกการร้องขอเข้าใช้งานฐานข้อมูลต้องผ่านกลไกตรวจสอบระบุบุคคลซ้ำๆ เสมอ"
+      },
+      {
+        id: 79,
+        category: 4,
+        text: "เทคโนโลยีตัดต่อดัดแปลงสัณฐานใบหน้าเสียงผ่านโครงสร้าง AI ยุคใหม่จนมีความนุ่มนวลแนบเนียนสมจริงเป็นภัยสแกมเมอร์เรียกว่าอะไร?",
+        choices: [
+          "Realfake",
+          "Deepfake (ดีพเฟก)",
+          "Maxfake",
+          "Smartfake"
+        ],
+        answer: 1,
+        trick: "Deep (จาก Deep Learning) + Fake (ปลอม) = ปลอมขั้นลึก ใช้ AI แปลงโฉมหน้าคนอื่นให้พูดตามที่ต้องการ เอาไว้ทำคลิปหลอกลวงคอลเซ็นเตอร์",
+        explanation: "ดีพเฟก (Deepfake) ใช้โครงสร้างเอไอใยประสาทสกัดวิเคราะห์รูปรอยกล้ามเนื้อใบหน้าและโทนเสียงเป้าหมาย นำมาประสมสร้างภาพลวงตาฉายทับใบหน้านักแสดงแทน จนมิจฉาชีพนิยมนำไปใช้สร้างวิดีโอตกทองคอลเซ็นเตอร์หลอกลวง"
+      },
+      {
+        id: 80,
+        category: 4,
+        text: "ระบบการสแกนชีวมิติ (Biometrics) ควบคุมกล่องประตูดักพนักงานเข้าตึกสำนักงานใช้พินวิทยาศาสตร์ส่วนใดในร่างกายตรวจสอบพิกัด?",
+        choices: [
+          "บัตรพลาสติกแถบแม่เหล็กพนักงาน",
+          "ลายนิ้วมือ ม่านตา หรือโครงสร้างรูปหน้าชีวภาพของแต่ละบุคคล",
+          "ชื่อและพาสเวิร์ดจดลงสมุดจารึก",
+          "รูปสลักใบประกาศนียบัตร"
+        ],
+        answer: 1,
+        trick: "Bio = สิ่งมีชีวิต ร่างกายมนุษย์ สแกนชีวมิติจุดที่สลักต่างกันเฉพาะคนดักแก้ยาก เช่น ลายนิ้วมือหรือใบหน้าสแกนเสร็จผ่านฉลุย",
+        explanation: "การตรวจพิสูจน์บุคคลด้วย Biometrics นำคุณลักษณะโครงร่างเนื้อเยื่อทางชีวภาพของบุคคลมาประเมินพิกัดดิจิทัลผ่านเซ็นเซอร์ภาพถ่าย ปลอมแปลงแฮกสลับตัวยากกว่าการถือพาสเวิร์ดหรือถือบัตรพนักงาน"
+      }
+    ];
+
+    // APPLICATION STATE MANAGEMENT
+    const state = {
+      username: '',
+      position: '',   // Selected Exam Track/Position
+      passcode: '',   // Provided passcode
+      questions: [],  // Active 40 questions (10 per category)
+      answers: {},    // Map of questionIndex: chosenChoiceIndex
+      flags: {},      // Map of questionIndex: boolean
+      currentQuestionIndex: 0,
+      timeLeft: 1800, // 30 minutes in seconds
+      timerInterval: null,
+      startTime: null,
+      results: null,
+      isAppsScript: false
+    };
+
+    // INIT
+    window.onload = function() {
+      // Quietly detect Apps Script in environment for backend storage without popups/status lights
+      if (typeof google !== 'undefined' && google.script && google.script.run) {
+        state.isAppsScript = true;
+      } else {
+        state.isAppsScript = false;
+      }
+      loadPreviousLogs();
+      setupKeyboardNavigation();
+    };
+
+    // KEYBOARD NAVIGATION SETUP
+    function setupKeyboardNavigation() {
+      document.addEventListener('keydown', function(event) {
+        // Only allow navigation when the quiz screen is visible
+        const quizScreen = document.getElementById('quiz-screen');
+        if (quizScreen && !quizScreen.classList.contains('hidden')) {
+          if (event.key === 'ArrowLeft') {
+            prevQuestion();
+          } else if (event.key === 'ArrowRight') {
+            nextQuestion();
+          }
+        }
+      });
+    }
+
+    // LOAD PREVIOUS LOGS FROM LOCALSTORAGE
+    function loadPreviousLogs() {
+      const logs = JSON.parse(localStorage.getItem('smart_exam_logs')) || [];
+      const tbody = document.getElementById('logs-tbody');
+      const container = document.getElementById('logs-container');
+      
+      if (logs.length > 0) {
+        container.classList.remove('hidden');
+        tbody.innerHTML = '';
+        
+        logs.slice().reverse().forEach(log => {
+          const isPass = log.percentage >= 60;
+          const statusClass = isPass ? 'bg-emerald-100 text-emerald-800 font-bold' : 'bg-red-100 text-red-800 font-bold';
+          const statusText = isPass ? 'ผ่านเกณฑ์ ✅' : 'ไม่ผ่านเกณฑ์ ❌';
+          
+          const tr = document.createElement('tr');
+          tr.className = "hover:bg-slate-50 transition-colors";
+          tr.innerHTML = `
+            <td class="px-4 py-3 whitespace-nowrap text-slate-500">${log.date}</td>
+            <td class="px-4 py-3 whitespace-nowrap font-medium text-slate-800 font-prompt">${escapeHtml(log.name)}</td>
+            <td class="px-4 py-3 whitespace-nowrap text-slate-600 font-prompt text-xs">${escapeHtml(log.position || 'ไม่ได้ระบุ')}</td>
+            <td class="px-4 py-3 whitespace-nowrap text-center font-semibold text-blue-900">${log.score} / ${log.total} (${log.percentage}%)</td>
+            <td class="px-4 py-3 whitespace-nowrap text-center text-slate-600 font-mono">${log.duration}</td>
+            <td class="px-4 py-3 whitespace-nowrap text-center">
+              <span class="inline-block px-2.5 py-1 rounded-full text-xs ${statusClass}">${statusText}</span>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+      } else {
+        container.classList.add('hidden');
+      }
+    }
+
+    // HELPER SHUFFLE ALGORITHM
+    function shuffleArray(array) {
+      const newArr = [...array];
+      for (let i = newArr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+      }
+      return newArr;
+    }
+
+    // START TEST VERIFICATION & FLOW
+    function startExam() {
+      const nameInput = document.getElementById('username').value.trim();
+      const posInput = document.getElementById('position').value;
+      const passcodeInput = document.getElementById('passcode-input').value.trim();
+      
+      if (!nameInput) {
+        showDialog('จำเป็นต้องระบุชื่อผู้เข้าสอบ', 'กรุณากรอกชื่อและนามสกุลจริงของคุณ เพื่อเริ่มต้นบันทึกข้อมูลผลการทำข้อสอบประเมินคะแนน', 'warning');
+        return;
+      }
+      if (!posInput) {
+        showDialog('จำเป็นต้องเลือกสายสอบ', 'กรุณาเลือกตำแหน่งสายสอบของคุณ เพื่อให้สอดคล้องกับรายงานสถิติของระบบ', 'warning');
+        return;
+      }
+      if (!passcodeInput) {
+        showDialog('จำเป็นต้องระบุรหัสเข้าสอบ', 'กรุณากรอกรหัสผ่านยืนยันสิทธิ์เข้าสอบที่ระบุอยู่ใน Google Sheet ของผู้ดูแลระบบ', 'warning');
+        return;
+      }
+      
+      state.username = nameInput;
+      state.position = posInput;
+      state.passcode = passcodeInput;
+
+      // Verification with Google Sheet or Standalone Fallback
+      if (state.isAppsScript) {
+        showLoadingDialog('กำลังตรวจสอบสิทธิ์เข้าสอบ...', 'ระบบกำลังค้นหาและตรวจสอบรหัสเข้าสอบของคุณกับตารางข้อมูล Google Sheet กรุณารอสักครู่');
+        
+        google.script.run
+          .withSuccessHandler((response) => {
+            closeDialog();
+            if (response && response.valid) {
+              proceedWithExam();
+            } else {
+              showDialog('รหัสผ่านเข้าสอบไม่ถูกต้อง', 'รหัสผ่านที่คุณป้อนไม่พาสิทธิ์ หรือไม่ได้ระบุลงในฐานข้อมูลของระบบ กรุณาติดต่อผู้รับผิดชอบหรือตรวจสอบตัวสะกดใหม่อีกครั้ง', 'warning');
+            }
+          })
+          .withFailureHandler((err) => {
+            closeDialog();
+            showDialog('เกิดข้อผิดพลาดในการตรวจสอบรหัส', 'ระบบขัดข้องไม่สามารถสื่อสารกับ Google Sheet ได้ในขณะนี้ กรุณาลองใหม่อีกครั้ง', 'warning');
+          })
+          .checkPasscode(passcodeInput);
+      } else {
+        // Mock simulation on standard previews
+        const mockValidCodes = ['PASS123', 'OK999', 'READY2026', 'ADMIN99'];
+        if (mockValidCodes.includes(passcodeInput.toUpperCase())) {
+          proceedWithExam();
+        } else {
+          showDialog('รหัสผ่านไม่ถูกต้อง (โหมดทดลอง)', 'กรุณาใช้รหัสทดสอบเพื่อผ่านสิทธิ์ในโหมดสาธิตนี้ เช่น <strong class="text-blue-900 font-mono">PASS123</strong>, <strong class="text-blue-900 font-mono">OK999</strong> หรือ <strong class="text-blue-900 font-mono">READY2026</strong>', 'warning');
+        }
+      }
+    }
+
+    // PROCEED WITH QUESTIONS INJECTION AND TIMER START
+    function proceedWithExam() {
+      // Group pool by Category
+      const cat1Pool = allQuestionsPool.filter(q => q.category === 1);
+      const cat2Pool = allQuestionsPool.filter(q => q.category === 2);
+      const cat3Pool = allQuestionsPool.filter(q => q.category === 3);
+      const cat4Pool = allQuestionsPool.filter(q => q.category === 4);
+      
+      // Shuffle each pool and extract 10 questions each
+      const selectedCat1 = shuffleArray(cat1Pool).slice(0, 10);
+      const selectedCat2 = shuffleArray(cat2Pool).slice(0, 10);
+      const selectedCat3 = shuffleArray(cat3Pool).slice(0, 10);
+      const selectedCat4 = shuffleArray(cat4Pool).slice(0, 10);
+      
+      // Combine and shuffle the combined set so they are interleaved beautifully
+      const combinedSet = [...selectedCat1, ...selectedCat2, ...selectedCat3, ...selectedCat4];
+      state.questions = shuffleArray(combinedSet);
+      
+      // Reset variables
+      state.answers = {};
+      state.flags = {};
+      state.currentQuestionIndex = 0;
+      state.timeLeft = 1800; // 30 mins
+      state.startTime = Date.now();
+      
+      // Toggle screens
+      document.getElementById('welcome-screen').classList.add('hidden');
+      document.getElementById('quiz-screen').classList.remove('hidden');
+      document.getElementById('result-screen').classList.add('hidden');
+      
+      // Render components
+      renderQuestion();
+      renderAnswerGrid();
+      startTimer();
+      showToast('ยืนยันรหัสสิทธิ์เข้าสอบเรียบร้อยแล้ว');
+    }
+
+    // RENDER CURRENT QUESTION & OPTIONS
+    function renderQuestion() {
+      const q = state.questions[state.currentQuestionIndex];
+      
+      // Category label mapping
+      const catBadge = document.getElementById('category-badge');
+      let catName = '';
+      let badgeClass = '';
+      switch(q.category) {
+        case 1: 
+          catName = 'หมวด 1: ความรู้พื้นฐานด้านไอทีและคอมพิวเตอร์'; 
+          badgeClass = 'bg-blue-100 text-blue-900 border border-blue-200';
+          break;
+        case 2: 
+          catName = 'หมวด 2: ระบบสื่อสารข้อมูลและเครือข่าย'; 
+          badgeClass = 'bg-indigo-100 text-indigo-900 border border-indigo-200';
+          break;
+        case 3: 
+          catName = 'หมวด 3: ทักษะการใช้โปรแกรมคอมพิวเตอร์สำนักงาน'; 
+          badgeClass = 'bg-emerald-100 text-emerald-900 border border-emerald-200';
+          break;
+        case 4: 
+          catName = 'หมวด 4: เทคโนโลยีสมัยใหม่และการประยุกต์ใช้'; 
+          badgeClass = 'bg-amber-100 text-amber-900 border border-amber-200';
+          break;
+      }
+      catBadge.innerText = catName;
+      catBadge.className = `text-xs font-semibold px-3 py-1 rounded-full font-prompt ${badgeClass}`;
+      
+      document.getElementById('current-q-index').innerText = state.currentQuestionIndex + 1;
+      document.getElementById('question-text').innerText = `${state.currentQuestionIndex + 1}. ${q.text}`;
+      
+      // Render choices
+      const choicesBox = document.getElementById('choices-container');
+      choicesBox.innerHTML = '';
+      
+      q.choices.forEach((choice, idx) => {
+        const letters = ['ก.', 'ข.', 'ค.', 'ง.'];
+        const isSelected = state.answers[state.currentQuestionIndex] === idx;
+        
+        const btn = document.createElement('button');
+        btn.onclick = () => selectAnswer(idx);
+        btn.className = `w-full text-left p-4 rounded-xl border flex items-start gap-3.5 transition-all group ${
+          isSelected 
+            ? 'bg-blue-50/80 border-blue-600 text-blue-900 ring-2 ring-blue-500/20' 
+            : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:border-slate-300'
+        } min-h-[56px]`; // Ensure standard comfortable touch height for mobile taps
+        
+        btn.innerHTML = `
+          <span class="w-7 h-7 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 transition-all font-prompt ${
+            isSelected 
+              ? 'bg-blue-600 text-white' 
+              : 'bg-slate-100 text-slate-500 group-hover:bg-slate-200'
+          }">${letters[idx]}</span>
+          <span class="text-sm sm:text-base font-medium pt-0.5 leading-relaxed">${choice}</span>
+        `;
+        choicesBox.appendChild(btn);
+      });
+      
+      // Flag status update
+      const flagIcon = document.getElementById('flag-icon');
+      if (state.flags[state.currentQuestionIndex]) {
+        flagIcon.setAttribute('fill', '#f59e0b');
+        flagIcon.setAttribute('stroke', '#f59e0b');
+      } else {
+        flagIcon.setAttribute('fill', 'none');
+        flagIcon.setAttribute('stroke', 'currentColor');
+      }
+      
+      // Progress Bar width
+      const progressPercent = ((state.currentQuestionIndex + 1) / 40) * 100;
+      document.getElementById('progress-bar-fill').style.width = `${progressPercent}%`;
+      
+      // Update Grid active cell status
+      updateActiveGridCell();
+      
+      // Manage Prev/Next Buttons text/icon
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      if (state.currentQuestionIndex === 0) {
+        prevBtn.classList.add('opacity-50', 'pointer-events-none');
+      } else {
+        prevBtn.classList.remove('opacity-50', 'pointer-events-none');
+      }
+      
+      if (state.currentQuestionIndex === 39) {
+        nextBtn.innerHTML = `ส่งกระดาษคำตอบ
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>`;
+        nextBtn.className = "px-4 sm:px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs sm:text-sm flex items-center gap-1.5 shadow transition-all font-prompt min-h-[44px]";
+      } else {
+        nextBtn.innerHTML = `ถัดไป (→)
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>`;
+        nextBtn.className = "px-4 sm:px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-900 to-[#1E3E62] hover:from-blue-800 hover:to-[#244A74] text-white font-medium text-xs sm:text-sm flex items-center gap-1.5 shadow transition-all font-prompt min-h-[44px]";
+      }
+    }
+
+    // ANSWER OPTION CLICK ACTION
+    function selectAnswer(choiceIdx) {
+      state.answers[state.currentQuestionIndex] = choiceIdx;
+      renderQuestion();
+      updateAnsweredCount();
+      updateAnswerGridCell(state.currentQuestionIndex);
+    }
+
+    // UPDATE FLAG ACTION
+    function toggleFlag() {
+      state.flags[state.currentQuestionIndex] = !state.flags[state.currentQuestionIndex];
+      renderQuestion();
+      updateAnswerGridCell(state.currentQuestionIndex);
+    }
+
+    // UPDATE ANSWERED RATIO TOP STATS
+    function updateAnsweredCount() {
+      const count = Object.keys(state.answers).length;
+      document.getElementById('answered-count').innerText = `${count} / 40 ข้อ`;
+    }
+
+    // PREV / NEXT QUESTION ACTIONS
+    function prevQuestion() {
+      if (state.currentQuestionIndex > 0) {
+        state.currentQuestionIndex--;
+        renderQuestion();
+      }
+    }
+
+    // NEXT QUESTION ACTION
+    function nextQuestion() {
+      if (state.currentQuestionIndex < 39) {
+        state.currentQuestionIndex++;
+        renderQuestion();
+      } else {
+        confirmSubmit();
+      }
+    }
+
+    // GENERATE SIDE ANSWER GRID
+    function renderAnswerGrid() {
+      const grid = document.getElementById('answers-grid');
+      grid.innerHTML = '';
+      
+      for (let i = 0; i < 40; i++) {
+        const cell = document.createElement('button');
+        cell.onclick = () => jumpToQuestion(i);
+        cell.id = `grid-cell-${i}`;
+        
+        // Base styling for cell
+        cell.className = getGridCellClass(i);
+        cell.innerText = i + 1;
+        grid.appendChild(cell);
+      }
+    }
+
+    // COMPOSE STYLING BASED ON CELL STATS (Ensure size and ease of tapping on mobile screens)
+    function getGridCellClass(idx) {
+      const isCurrent = idx === state.currentQuestionIndex;
+      const isAnswered = state.answers[idx] !== undefined;
+      const isFlagged = state.flags[idx] === true;
+      
+      let bgClass = 'bg-white text-slate-600 border-slate-300 hover:bg-slate-50';
+      let fontClass = 'font-semibold font-mono';
+      let borderClass = 'border';
+      let ringClass = '';
+      
+      if (isFlagged) {
+        bgClass = 'bg-amber-400 text-slate-900 border-amber-400 hover:bg-amber-500';
+      } else if (isAnswered) {
+        bgClass = 'bg-blue-900 text-white border-blue-900 hover:bg-blue-800';
+      }
+      
+      if (isCurrent) {
+        ringClass = 'ring-2 ring-offset-2 ring-blue-600';
+        borderClass = 'border-2 border-blue-600';
+      }
+      
+      return `w-full aspect-square text-xs sm:text-sm rounded-xl flex items-center justify-center transition-all ${bgClass} ${fontClass} ${borderClass} ${ringClass} min-h-[40px]`;
+    }
+
+    function updateAnswerGridCell(idx) {
+      const cell = document.getElementById(`grid-cell-${idx}`);
+      if (cell) {
+        cell.className = getGridCellClass(idx);
+      }
+    }
+
+    function updateActiveGridCell() {
+      for (let i = 0; i < 40; i++) {
+        updateAnswerGridCell(i);
+      }
+    }
+
+    function jumpToQuestion(idx) {
+      state.currentQuestionIndex = idx;
+      renderQuestion();
+    }
+
+    // TIMER ENGINE
+    function startTimer() {
+      if (state.timerInterval) clearInterval(state.timerInterval);
+      
+      const timerText = document.getElementById('timer-text');
+      const timerBox = document.getElementById('timer-box');
+      
+      state.timerInterval = setInterval(() => {
+        state.timeLeft--;
+        
+        const minutes = Math.floor(state.timeLeft / 60);
+        const seconds = state.timeLeft % 60;
+        
+        // Format MM:SS
+        const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        timerText.innerText = formattedTime;
+        
+        // Dynamic warn levels
+        if (state.timeLeft <= 300 && state.timeLeft > 60) { // Under 5 minutes
+          timerBox.className = "flex items-center gap-2 bg-amber-950 text-amber-300 px-4 py-2 rounded-xl border border-amber-800 animate-pulse";
+          timerText.className = "font-mono text-base sm:text-lg font-bold tracking-widest text-amber-400";
+        } else if (state.timeLeft <= 60) { // Under 1 minute
+          timerBox.className = "flex items-center gap-2 bg-red-950 text-red-300 px-4 py-2 rounded-xl border border-red-800 animate-pulse";
+          timerText.className = "font-mono text-base sm:text-lg font-bold tracking-widest text-red-400";
+        } else {
+          timerBox.className = "flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-xl border border-slate-800";
+          timerText.className = "font-mono text-base sm:text-lg font-bold tracking-widest text-amber-400";
+        }
+        
+        // Timeout
+        if (state.timeLeft <= 0) {
+          clearInterval(state.timerInterval);
+          submitExam(true); // Forced submit due to timeout
+        }
+      }, 1000);
+    }
+
+    // CONFIRM SUBMIT MODAL DIALOG
+    function confirmSubmit() {
+      const unansweredCount = 40 - Object.keys(state.answers).length;
+      
+      let message = 'คุณต้องการส่งกระดาษคำตอบเพื่อประเมินคะแนนทันทีหรือไม่?';
+      if (unansweredCount > 0) {
+        message = `คุณยังไม่ได้ตอบคำถามอีกจำนวน <strong class="text-red-600 text-base font-prompt">${unansweredCount} ข้อ</strong> หากกดส่งคำถามเหล่านี้จะถูกคิดคะแนนเป็นศูนย์ทันที ยืนยันที่จะส่งหรือไม่?`;
+      }
+      
+      showConfirmDialog('ยืนยันการส่งข้อสอบ', message, () => {
+        submitExam(false);
+      });
+    }
+
+    // EXAM EVALUATION & GRADE SCORING ENGINE
+    function submitExam(isTimeout = false) {
+      clearInterval(state.timerInterval);
+      closeDialog();
+      
+      let correctCount = 0;
+      let cat1Correct = 0;
+      let cat2Correct = 0;
+      let cat3Correct = 0;
+      let cat4Correct = 0;
+      
+      state.questions.forEach((q, idx) => {
+        const chosen = state.answers[idx];
+        const isCorrect = chosen === q.answer;
+        
+        if (isCorrect) {
+          correctCount++;
+          switch(q.category) {
+            case 1: cat1Correct++; break;
+            case 2: cat2Correct++; break;
+            case 3: cat3Correct++; break;
+            case 4: cat4Correct++; break;
+          }
+        }
+      });
+      
+      const percentage = Math.round((correctCount / 40) * 100);
+      const timeSpentSec = 1800 - state.timeLeft;
+      const spentMin = Math.floor(timeSpentSec / 60);
+      const spentSec = timeSpentSec % 60;
+      const durationStr = `${spentMin} นาที ${spentSec} วินาที`;
+      
+      state.results = {
+        score: correctCount,
+        total: 40,
+        percentage: percentage,
+        duration: durationStr,
+        cat1: cat1Correct,
+        cat2: cat2Correct,
+        cat3: cat3Correct,
+        cat4: cat4Correct,
+        date: new Date().toLocaleString('th-TH')
+      };
+      
+      // Render analytic visual summary
+      renderScores();
+      renderDetailedReview();
+      
+      // Save data (Apps Script cloud sync or LocalStorage fallback)
+      saveToDatabase();
+      
+      // Display Results screen
+      document.getElementById('quiz-screen').classList.add('hidden');
+      document.getElementById('result-screen').classList.remove('hidden');
+      
+      // Scroll seamlessly to results top so mobile users don't have to scroll manually
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      if (isTimeout) {
+        showDialog('หมดเวลาสอบ!', 'ระบบได้ทำการรวบรวมคำตอบและประเมินผลคะแนนของคุณอัตโนมัติเรียบร้อยแล้ว เนื่องจากครบกำหนดเวลา 30 นาทีที่ตั้งไว้ตามเกณฑ์', 'warning');
+      }
+    }
+
+    // RENDER METRIC REPORT BOARDS
+    function renderScores() {
+      const res = state.results;
+      const isPass = res.percentage >= 60;
+      
+      const scoreBadge = document.getElementById('score-status-badge');
+      scoreBadge.innerText = isPass ? 'ยินดีด้วย! คุณผ่านเกณฑ์การสอบประเมินผล' : 'คุณยังไม่ผ่านเกณฑ์การประเมินวิชา';
+      scoreBadge.className = isPass 
+        ? "bg-emerald-400 text-slate-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider font-prompt" 
+        : "bg-red-400 text-white font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider font-prompt";
+      
+      document.getElementById('score-text').innerText = `${res.score} / 40 คะแนน (${res.percentage}%)`;
+      document.getElementById('result-user-meta').innerText = `ผู้เข้าทดสอบ: คุณ ${state.username} | ตำแหน่ง: ${state.position} | สอบเมื่อ ${res.date}`;
+      document.getElementById('time-spent-text').innerText = res.duration;
+      
+      // Gauge dial logic
+      const circle = document.getElementById('radial-progress-bar');
+      const strokeDashoffset = 263.89 - (263.89 * res.percentage) / 100;
+      circle.style.strokeDashoffset = strokeDashoffset;
+      circle.style.stroke = isPass ? '#10b981' : '#ef4444';
+      
+      document.getElementById('radial-percent').innerText = `${res.percentage}%`;
+      document.getElementById('radial-percent').className = `text-2xl sm:text-3xl font-extrabold font-prompt ${isPass ? 'text-emerald-600' : 'text-red-600'}`;
+      document.getElementById('radial-status').innerText = isPass ? 'ผ่านเกณฑ์แล้ว ✅' : 'ไม่ผ่านเกณฑ์ ❌';
+      document.getElementById('radial-status').className = `text-[10px] font-bold uppercase tracking-wider ${isPass ? 'text-emerald-700' : 'text-red-700'}`;
+      
+      // Categories horizontal bars mapping
+      document.getElementById('cat1-score').innerText = `${res.cat1} / 10 ข้อ`;
+      document.getElementById('cat1-progress').style.width = `${res.cat1 * 10}%`;
+      
+      document.getElementById('cat2-score').innerText = `${res.cat2} / 10 ข้อ`;
+      document.getElementById('cat2-progress').style.width = `${res.cat2 * 10}%`;
+      
+      document.getElementById('cat3-score').innerText = `${res.cat3} / 10 ข้อ`;
+      document.getElementById('cat3-progress').style.width = `${res.cat3 * 10}%`;
+      
+      document.getElementById('cat4-score').innerText = `${res.cat4} / 10 ข้อ`;
+      document.getElementById('cat4-progress').style.width = `${res.cat4 * 10}%`;
+    }
+
+    // DATABASE STORAGE ENGINE (STANDALONE VS GAS)
+    function saveToDatabase() {
+      const payload = {
+        name: state.username,
+        position: state.position,
+        passcode: state.passcode,
+        score: state.results.score,
+        total: state.results.total,
+        percentage: state.results.percentage,
+        duration: state.results.duration,
+        cat1: state.results.cat1,
+        cat2: state.results.cat2,
+        cat3: state.results.cat3,
+        cat4: state.results.cat4
+      };
+      
+      // ALWAYS backup inside browser LocalStorage for logs
+      const logs = JSON.parse(localStorage.getItem('smart_exam_logs')) || [];
+      logs.push({
+        name: state.username,
+        position: state.position,
+        score: state.results.score,
+        total: state.results.total,
+        percentage: state.results.percentage,
+        duration: state.results.duration,
+        date: state.results.date
+      });
+      localStorage.setItem('smart_exam_logs', JSON.stringify(logs));
+      
+      // If deployed in Google Apps Script, silently trigger saveResult in background
+      if (state.isAppsScript) {
+        google.script.run
+          .withSuccessHandler((response) => {
+            showToast("เชื่อมโยงข้อมูลและบันทึกคะแนนเรียบร้อยแล้ว");
+          })
+          .withFailureHandler((err) => {
+            // Silently fail or log to background
+          })
+          .saveResult(payload);
+      }
+      
+      loadPreviousLogs();
+    }
+
+    // DETAIL ANALYSIS REVIEW CARDS INJECTION
+    function renderDetailedReview() {
+      const container = document.getElementById('review-cards-container');
+      container.innerHTML = '';
+      
+      state.questions.forEach((q, idx) => {
+        const letters = ['ก.', 'ข.', 'ค.', 'ง.'];
+        const chosen = state.answers[idx];
+        const correct = q.answer;
+        const isCorrect = chosen === correct;
+        
+        const card = document.createElement('div');
+        card.className = `bg-white rounded-2xl p-4 sm:p-6 border ${isCorrect ? 'border-emerald-200 shadow-sm' : 'border-red-200 shadow-sm'} space-y-4`;
+        
+        let headerText = '';
+        let headerClass = '';
+        if (isCorrect) {
+          headerText = `ข้อที่ ${idx + 1}: ถูกต้อง ✅`;
+          headerClass = 'text-emerald-700 font-bold';
+        } else {
+          headerText = `ข้อที่ ${idx + 1}: ตอบผิด ❌`;
+          headerClass = 'text-red-700 font-bold';
+        }
+        
+        let optionsHtml = '';
+        q.choices.forEach((choice, cIdx) => {
+          let style = 'text-slate-600';
+          let icon = '';
+          
+          if (cIdx === correct) {
+            style = 'text-emerald-700 font-bold bg-emerald-50 rounded-lg border border-emerald-200 px-3 py-2 flex items-center gap-1.5';
+            icon = `<span class="bg-emerald-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0">✓</span>`;
+          } else if (cIdx === chosen && !isCorrect) {
+            style = 'text-red-700 font-bold bg-red-50 rounded-lg border border-red-200 px-3 py-2 flex items-center gap-1.5';
+            icon = `<span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs flex-shrink-0">✗</span>`;
+          } else {
+            style = 'text-slate-600 px-3 py-2';
+          }
+          
+          optionsHtml += `
+            <div class="text-xs sm:text-sm ${style}">
+              <div class="flex items-center gap-2">
+                ${icon}
+                <span><span class="font-bold mr-1">${letters[cIdx]}</span> ${choice}</span>
+              </div>
+            </div>
+          `;
+        });
+        
+        card.innerHTML = `
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-3">
+            <span class="${headerClass} text-sm sm:text-base md:text-lg font-prompt">${headerText}</span>
+            <span class="text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">${getCategoryLabel(q.category)}</span>
+          </div>
+          
+          <h4 class="text-slate-900 font-semibold text-xs sm:text-sm md:text-base leading-relaxed font-prompt">${idx + 1}. ${q.text}</h4>
+          
+          <div class="space-y-1.5 pl-1">
+            ${optionsHtml}
+          </div>
+          
+          <!-- TRICK EXP PANEL -->
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-2 text-xs text-slate-600">
+            <div class="flex items-start gap-1.5">
+              <span class="bg-amber-100 text-amber-800 text-[9px] sm:text-[10px] font-extrabold px-2 py-0.5 rounded font-prompt">เทคนิคจำด่วน</span>
+              <p class="font-medium text-slate-700 pt-0.5">${q.trick}</p>
+            </div>
+            <div class="border-t border-slate-200/60 pt-2 pl-0.5">
+              <strong class="text-slate-700 font-semibold block mb-1 font-prompt">บทวิเคราะห์และเฉลยคำตอบ:</strong>
+              <p class="leading-relaxed font-light">${q.explanation}</p>
+            </div>
+          </div>
+        `;
+        
+        container.appendChild(card);
+      });
+    }
+
+    function getCategoryLabel(categoryVal) {
+      switch (categoryVal) {
+        case 1: return "หมวดที่ 1: ความรู้พื้นฐานด้านไอทีและคอมพิวเตอร์";
+        case 2: return "หมวดที่ 2: ระบบสื่อสารข้อมูลและเครือข่าย";
+        case 3: return "หมวดที่ 3: ทักษะการใช้โปรแกรมคอมพิวเตอร์สำนักงาน";
+        case 4: return "หมวดที่ 4: เทคโนโลยีสมัยใหม่และการประยุกต์ใช้";
+        default: return "";
+      }
+    }
+
+    // RETURNING NAVIGATION LOGIC
+    function returnToStart() {
+      document.getElementById('username').value = '';
+      document.getElementById('position').selectedIndex = 0;
+      document.getElementById('passcode-input').value = '';
+      document.getElementById('welcome-screen').classList.remove('hidden');
+      document.getElementById('quiz-screen').classList.add('hidden');
+      document.getElementById('result-screen').classList.add('hidden');
+      loadPreviousLogs();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function restartExam() {
+      startExam();
+    }
+
+    function clearLogs() {
+      showConfirmDialog('ยืนยันการลบประวัติ', 'ประวัติการทดสอบและสถิติสะสมทั้งหมดของคุณบนเว็บเบราว์เซอร์เครื่องนี้จะถูกล้างค่าโดยถาวร ต้องการดำเนินการต่อไปหรือไม่?', () => {
+        localStorage.removeItem('smart_exam_logs');
+        loadPreviousLogs();
+        showToast('ล้างประวัติการทดสอบเรียบร้อยแล้ว');
+      });
+    }
+
+    // CUSTOM FLOATING TOASTS
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      
+      toastText.innerText = text;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3500);
+    }
+
+    // MODAL DIALOG CONTROLLERS (REPLACES UNSAFE WINDOW ALERT)
+    function showDialog(title, message, type = 'info') {
+      const modal = document.getElementById('custom-dialog');
+      const box = document.getElementById('dialog-box');
+      const titleEl = document.getElementById('dialog-title');
+      const msgEl = document.getElementById('dialog-message');
+      const actionsEl = document.getElementById('dialog-actions');
+      const headerEl = document.getElementById('dialog-header');
+      
+      titleEl.innerText = title;
+      msgEl.innerHTML = message;
+      
+      actionsEl.innerHTML = `
+        <button onclick="closeDialog()" class="bg-blue-900 hover:bg-blue-800 text-white font-medium text-sm py-2 px-6 rounded-xl transition-all font-prompt min-h-[40px]">ตกลง</button>
+      `;
+      
+      if (type === 'warning') {
+        headerEl.className = "flex items-center gap-3 text-amber-500";
+        headerEl.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <h3 class="text-lg font-bold font-prompt" id="dialog-title">${title}</h3>
+        `;
+      } else {
+        headerEl.className = "flex items-center gap-3 text-blue-900";
+        headerEl.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="text-lg font-bold font-prompt" id="dialog-title">${title}</h3>
+        `;
+      }
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        box.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function showLoadingDialog(title, message) {
+      const modal = document.getElementById('custom-dialog');
+      const box = document.getElementById('dialog-box');
+      const titleEl = document.getElementById('dialog-title');
+      const msgEl = document.getElementById('dialog-message');
+      const actionsEl = document.getElementById('dialog-actions');
+      const headerEl = document.getElementById('dialog-header');
+      
+      titleEl.innerText = title;
+      msgEl.innerHTML = `
+        <div class="flex flex-col items-center justify-center gap-4 py-3">
+          <div class="w-10 h-10 border-4 border-blue-900 border-t-amber-500 rounded-full animate-spin"></div>
+          <p class="text-center text-sm text-slate-600 leading-relaxed">${message}</p>
+        </div>
+      `;
+      actionsEl.innerHTML = ''; // No action buttons while loading
+      
+      headerEl.className = "flex items-center gap-3 text-blue-900";
+      headerEl.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 animate-pulse text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+        <h3 class="text-lg font-bold font-prompt" id="dialog-title">${title}</h3>
+      `;
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        box.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function showConfirmDialog(title, message, onConfirm) {
+      const modal = document.getElementById('custom-dialog');
+      const box = document.getElementById('dialog-box');
+      const titleEl = document.getElementById('dialog-title');
+      const msgEl = document.getElementById('dialog-message');
+      const actionsEl = document.getElementById('dialog-actions');
+      const headerEl = document.getElementById('dialog-header');
+      
+      titleEl.innerText = title;
+      msgEl.innerHTML = message;
+      
+      actionsEl.innerHTML = `
+        <button onclick="closeDialog()" class="border border-slate-300 hover:bg-slate-100 text-slate-700 font-medium text-sm py-2 px-4 rounded-xl transition-all font-prompt min-h-[40px]">ยกเลิก</button>
+        <button id="confirm-btn-yes" class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm py-2 px-5 rounded-xl transition-all shadow font-prompt min-h-[40px]">ยืนยัน</button>
+      `;
+      
+      document.getElementById('confirm-btn-yes').onclick = () => {
+        onConfirm();
+        closeDialog();
+      };
+      
+      headerEl.className = "flex items-center gap-3 text-blue-900";
+      headerEl.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h3 class="text-lg font-bold font-prompt" id="dialog-title">${title}</h3>
+      `;
+      
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        box.classList.remove('scale-95');
+      }, 10);
+    }
+
+    function closeDialog() {
+      const modal = document.getElementById('custom-dialog');
+      const box = document.getElementById('dialog-box');
+      box.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    // SECURE ESCAPE HTML UTILITIES
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+  </script>
+</body>
+</html>
